@@ -11,6 +11,17 @@
 <body>
     <!-- DecapCMS will render here -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+        // Initialize DecapCMS with explicit config path
+        if (window.CMS) {
+            window.CMS.init({
+                config: {
+                    load_config_file: true,
+                    local_backend: false
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
