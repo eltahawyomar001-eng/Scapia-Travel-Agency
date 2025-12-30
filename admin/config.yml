@@ -1,0 +1,269 @@
+# DecapCMS Configuration for SCAPIA Travel Website
+# This file configures the CMS backend, media storage, and content collections
+
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/travel-website  # Replace with your actual GitHub repo
+  branch: main
+  base_url: https://api.netlify.com  # For Netlify Identity, or use Vercel OAuth
+
+# Media files configuration
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Site URL (update after deployment)
+site_url: https://your-site.vercel.app
+
+# Logo for the admin UI
+logo_url: /images/logo.png
+
+# Slug settings
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+
+# Collections define the structure of content types
+collections:
+  # =========================================
+  # TRIPS COLLECTION
+  # =========================================
+  - name: "trips"
+    label: "Trips"
+    folder: "content/trips"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "The name of the trip (e.g., 'Bali Paradise Escape')"
+      
+      - label: "Destination"
+        name: "destination"
+        widget: "string"
+        hint: "Location (e.g., 'Bali, Indonesia')"
+      
+      - label: "Short Description"
+        name: "excerpt"
+        widget: "text"
+        hint: "Brief description for cards (2-3 sentences)"
+      
+      - label: "Full Description"
+        name: "description"
+        widget: "markdown"
+        hint: "Complete trip overview"
+      
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+        hint: "Main hero image for the trip"
+      
+      - label: "Gallery Images"
+        name: "gallery"
+        widget: "list"
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"
+      
+      - label: "Price"
+        name: "price"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        hint: "Price per person in USD"
+      
+      - label: "Duration"
+        name: "duration"
+        widget: "string"
+        hint: "e.g., '7 Days / 6 Nights'"
+      
+      - label: "Group Size"
+        name: "groupSize"
+        widget: "string"
+        hint: "e.g., 'Max 12 people'"
+      
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Family Holidays", value: "family" }
+          - { label: "Adventure Travel", value: "adventure" }
+          - { label: "Beach Getaways", value: "beach" }
+          - { label: "Nature Escapes", value: "nature" }
+          - { label: "Cultural Tours", value: "cultural" }
+          - { label: "Romantic Getaways", value: "romantic" }
+      
+      - label: "Tour Type"
+        name: "tourType"
+        widget: "string"
+        hint: "e.g., 'Adventure', 'Relaxation', 'Cultural'"
+      
+      - label: "Accommodation"
+        name: "accommodation"
+        widget: "string"
+        hint: "e.g., '4-Star Hotels'"
+      
+      - label: "What's Included"
+        name: "included"
+        widget: "list"
+        field:
+          label: "Item"
+          name: "item"
+          widget: "string"
+      
+      - label: "Itinerary"
+        name: "itinerary"
+        widget: "list"
+        fields:
+          - { label: "Day", name: "day", widget: "number" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+      
+      - label: "Is Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        hint: "Show on homepage as featured trip"
+      
+      - label: "Is Best Seller"
+        name: "bestSeller"
+        widget: "boolean"
+        default: false
+      
+      - label: "Next Available Date"
+        name: "nextDate"
+        widget: "datetime"
+        format: "MMMM D, YYYY"
+
+  # =========================================
+  # BLOG POSTS COLLECTION
+  # =========================================
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "MMMM D, YYYY"
+      
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+      
+      - label: "Excerpt"
+        name: "excerpt"
+        widget: "text"
+        hint: "Short description for blog cards"
+      
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Destinations"
+          - "Travel Tips"
+          - "Adventure"
+          - "Culture"
+          - "Food"
+      
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+      
+      - label: "Is Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        hint: "Show as featured post at top of blog page"
+      
+      - label: "Author"
+        name: "author"
+        widget: "string"
+        default: "SCAPIA Team"
+
+  # =========================================
+  # HOMEPAGE SETTINGS
+  # =========================================
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Homepage Content"
+        name: "homepage"
+        file: "content/settings/homepage.json"
+        fields:
+          - label: "Hero Title"
+            name: "heroTitle"
+            widget: "string"
+            default: "Let's Explore destinations you've only imagined."
+          
+          - label: "Hero Description"
+            name: "heroDescription"
+            widget: "text"
+          
+          - label: "Hero Background Image"
+            name: "heroImage"
+            widget: "image"
+          
+          - label: "Services Section Title"
+            name: "servicesTitle"
+            widget: "string"
+          
+          - label: "Services Section Subtitle"
+            name: "servicesSubtitle"
+            widget: "text"
+          
+          - label: "CTA Title"
+            name: "ctaTitle"
+            widget: "string"
+          
+          - label: "CTA Description"
+            name: "ctaDescription"
+            widget: "text"
+      
+      - label: "Company Info"
+        name: "company"
+        file: "content/settings/company.json"
+        fields:
+          - label: "Company Name"
+            name: "name"
+            widget: "string"
+            default: "SCAPIA"
+          
+          - label: "Tagline"
+            name: "tagline"
+            widget: "string"
+          
+          - label: "Phone"
+            name: "phone"
+            widget: "string"
+          
+          - label: "Email"
+            name: "email"
+            widget: "string"
+          
+          - label: "Address"
+            name: "address"
+            widget: "text"
+          
+          - label: "Facebook URL"
+            name: "facebook"
+            widget: "string"
+            required: false
+          
+          - label: "Instagram URL"
+            name: "instagram"
+            widget: "string"
+            required: false
+          
+          - label: "Twitter URL"
+            name: "twitter"
+            widget: "string"
+            required: false

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact SCAPIA - Get in touch with our travel experts for bookings, inquiries, and support.">
+    <title>Contact Us - SCAPIA Travel</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+
+<body>
+    <div class="page">
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">SCAPIA</a>
+
+            <div class="nav__menu" id="navMenu">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="about.html" class="nav__link">About Us</a>
+                <a href="blog.html" class="nav__link">Blog</a>
+                <a href="contact.html" class="nav__link nav__link--active">Contact</a>
+            </div>
+
+            <div class="nav__actions">
+                <button class="nav__lang-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                    </svg>
+                    <span>EN</span>
+                </button>
+            </div>
+
+            <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <main class="main">
+            <!-- Hero Section -->
+            <section class="contact-hero">
+                <div class="contact-hero__container">
+                    <h1 class="contact-hero__title h2">Get in Touch</h1>
+                    <p class="contact-hero__desc">Have questions about your next adventure? We're here to help you plan
+                        the perfect trip.</p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section">
+                <form class="contact-form" action="#" method="POST">
+                    <h2 class="contact-form__title">Send Us a Message</h2>
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="name">Full Name</label>
+                        <input type="text" id="name" name="name" class="form-group__input" placeholder="Enter your name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-group__input"
+                            placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-group__input"
+                            placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-group__input"
+                            placeholder="What is this about?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="message">Message</label>
+                        <textarea id="message" name="message" class="form-group__textarea"
+                            placeholder="Tell us more about your inquiry..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--dark contact-form__submit">Send Message</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="contact-info__card">
+                        <div class="contact-info__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222222"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div class="contact-info__content">
+                            <h3 class="contact-info__title">Our Office</h3>
+                            <p class="contact-info__text">123 Travel Street, Suite 100<br>New York, NY 10001</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info__card">
+                        <div class="contact-info__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222222"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <div class="contact-info__content">
+                            <h3 class="contact-info__title">Phone</h3>
+                            <p class="contact-info__text"><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info__card">
+                        <div class="contact-info__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222222"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div class="contact-info__content">
+                            <h3 class="contact-info__title">Email</h3>
+                            <p class="contact-info__text"><a href="mailto:hello@scapia.travel">hello@scapia.travel</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info__card">
+                        <div class="contact-info__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222222"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <div class="contact-info__content">
+                            <h3 class="contact-info__title">Business Hours</h3>
+                            <p class="contact-info__text">Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta">
+                <div class="cta__container">
+                    <h2 class="cta__title">Prefer to Chat? Call Us Now!</h2>
+                    <p class="cta__desc">Our travel experts are standing by to help you plan your dream vacation.</p>
+                    <a href="tel:+1234567890" class="btn btn--primary cta__btn">+1 (234) 567-890</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__brand">
+                    <span class="footer__logo">SCAPIA</span>
+                    <p class="footer__desc">Your gateway to extraordinary travel experiences around the world.</p>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <div class="footer__links">
+                        <a href="index.html" class="footer__link">Home</a>
+                        <a href="about.html" class="footer__link">About Us</a>
+                        <a href="blog.html" class="footer__link">Blog</a>
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Destinations</h4>
+                    <div class="footer__links">
+                        <a href="trip-details.html" class="footer__link">Bali, Indonesia</a>
+                        <a href="trip-details.html" class="footer__link">Paris, France</a>
+                        <a href="trip-details.html" class="footer__link">Tokyo, Japan</a>
+                        <a href="trip-details.html" class="footer__link">New York, USA</a>
+                    </div>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Support</h4>
+                    <div class="footer__links">
+                        <a href="#" class="footer__link">FAQs</a>
+                        <a href="#" class="footer__link">Privacy Policy</a>
+                        <a href="#" class="footer__link">Terms of Service</a>
+                        <a href="contact.html" class="footer__link">Help Center</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 SCAPIA. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

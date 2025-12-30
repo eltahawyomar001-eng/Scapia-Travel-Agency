@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Base Styles - Typography & Body
+   ========================================================================== */
+
+/* Geist Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Note: Geist is not on Google Fonts, using a CDN or local font */
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Body */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-medium);
+    color: var(--color-black-text);
+    background-color: var(--color-white);
+}
+
+/* Headings */
+h1,
+.h1 {
+    font-size: var(--font-size-display);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-display);
+    text-transform: capitalize;
+}
+
+h2,
+.h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-h2);
+    letter-spacing: var(--letter-spacing-h2);
+    text-transform: capitalize;
+}
+
+h3,
+.h3 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-h3);
+    letter-spacing: var(--letter-spacing-h3);
+    text-transform: capitalize;
+}
+
+h4,
+.h4 {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-h4);
+    letter-spacing: var(--letter-spacing-h4);
+}
+
+h5,
+.h5 {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-h5);
+    letter-spacing: var(--letter-spacing-h5);
+    text-transform: capitalize;
+}
+
+/* Body Text Styles */
+.text-xxlarge {
+    font-size: var(--font-size-xxlarge);
+    line-height: var(--line-height-xxlarge);
+}
+
+.text-xlarge {
+    font-size: var(--font-size-xlarge);
+    line-height: var(--line-height-xlarge);
+}
+
+.text-large {
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-large);
+}
+
+.text-medium {
+    font-size: var(--font-size-medium);
+    line-height: var(--line-height-medium);
+}
+
+.text-small {
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+}
+
+/* Font Weights */
+.font-regular {
+    font-weight: var(--font-weight-regular);
+}
+
+.font-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Text Colors */
+.text-black {
+    color: var(--color-black-text);
+}
+
+.text-gray {
+    color: var(--color-gray-text);
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+/* Text Alignment */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Links */
+a {
+    color: var(--color-black-text);
+    transition: opacity var(--transition-fast);
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--color-black-text);
+    color: var(--color-white);
+}

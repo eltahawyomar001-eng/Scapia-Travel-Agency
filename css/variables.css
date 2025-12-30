@@ -1,0 +1,118 @@
+/* ==========================================================================
+   SCAPIA Travel Website - CSS Design Tokens
+   ========================================================================== */
+
+:root {
+    /* ========== Colors ========== */
+    /* Primary Colors */
+    --color-text-primary: #222222;
+    --color-text-secondary: #7C7C7C;
+    --color-white: #FFFFFF;
+    --color-bg-primary: #FFFFFF;
+    --color-bg-secondary: #F8F8F8;
+    --color-border: #E3E8EF;
+
+    /* Legacy variables (for compatibility) */
+    --color-black-text: #222222;
+    --color-gray-text: #7C7C7C;
+    --color-white-bg: #FAFAFA;
+    --color-white-stroke: #E3E8EF;
+
+    /* ========== Typography ========== */
+    --font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+
+    /* Font Sizes */
+    --font-size-display: 84px;
+    --font-size-h2: 48px;
+    --font-size-h3: 36px;
+    --font-size-h4: 30px;
+    --font-size-h5: 24px;
+    --font-size-xxlarge: 24px;
+    --font-size-xlarge: 20px;
+    --font-size-large: 18px;
+    --font-size-medium: 16px;
+    --font-size-small: 14px;
+
+    /* Line Heights */
+    --line-height-display: 90px;
+    --line-height-h2: 62px;
+    --line-height-h3: 44px;
+    --line-height-h4: 36px;
+    --line-height-h5: 30px;
+    --line-height-xxlarge: 36px;
+    --line-height-xlarge: 26px;
+    --line-height-large: 30px;
+    --line-height-medium: 26px;
+    --line-height-small: 26px;
+
+    /* Letter Spacing */
+    --letter-spacing-display: -3px;
+    --letter-spacing-h2: -2px;
+    --letter-spacing-h3: -1.5px;
+    --letter-spacing-h4: -1px;
+    --letter-spacing-h5: -1px;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+
+    /* ========== Spacing ========== */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 40px;
+    --spacing-2xl: 50px;
+    --spacing-3xl: 100px;
+
+    /* Section Padding */
+    --section-padding-desktop: 100px 50px;
+    --section-padding-mobile: 32px 16px;
+    --nav-padding-desktop: 32px 50px;
+    --nav-padding-mobile: 16px;
+    --nav-gap: 88px;
+
+    /* Container */
+    --container-max-width: 1340px;
+    --container-padding: 50px;
+
+    /* ========== Border Radius ========== */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-2xl: 32px;
+    --radius-full: 500px;
+
+    /* ========== Shadows ========== */
+    --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0px 8px 24px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0px 16px 48px rgba(0, 0, 0, 0.2);
+
+    /* ========== Transitions ========== */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* ========== Breakpoints (for reference) ========== */
+    /* Desktop: >= 1024px */
+    /* Tablet: 768px - 1023px */
+    /* Mobile: <= 767px */
+}
+
+/* Mobile overrides */
+@media (max-width: 767px) {
+    :root {
+        --font-size-display: 36px;
+        --line-height-display: 44px;
+        --letter-spacing-display: -1.5px;
+
+        --font-size-h2: 24px;
+        --line-height-h2: 30px;
+        --letter-spacing-h2: -1px;
+
+        --section-padding-desktop: 32px 16px;
+    }
+}

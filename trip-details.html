@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore Bali, Indonesia - Book your tropical paradise adventure with SCAPIA Travel.">
+    <title>Bali, Indonesia - SCAPIA Travel</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/trip-details.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+
+<body>
+    <div class="page">
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">SCAPIA</a>
+
+            <div class="nav__menu" id="navMenu">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="about.html" class="nav__link">About Us</a>
+                <a href="blog.html" class="nav__link">Blog</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </div>
+
+            <div class="nav__actions">
+                <button class="nav__lang-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path
+                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                        </path>
+                    </svg>
+                    <span>EN</span>
+                </button>
+            </div>
+
+            <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <main class="main">
+            <!-- Trip Header (Breadcrumb + Title) -->
+            <section class="trip-header">
+                <div class="trip-header__breadcrumb">
+                    <a href="index.html" class="trip-header__breadcrumb-link">Trips</a>
+                    <svg class="trip-header__breadcrumb-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                    <a href="#" class="trip-header__breadcrumb-link">Packages</a>
+                    <svg class="trip-header__breadcrumb-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                    <span class="trip-header__breadcrumb-current">Details</span>
+                </div>
+
+                <div class="trip-header__title-row">
+                    <h1 class="trip-header__title">Adventure Beyond The Edge</h1>
+                    <div class="trip-header__info">
+                        <span class="trip-header__meta">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Patagonia, Argentina
+                        </span>
+                        <span class="trip-header__meta">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            7 Days
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Image Gallery (2-Column Layout) -->
+            <section class="trip-gallery-hero">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Mountain landscape"
+                    class="trip-gallery-hero__main">
+                <div class="trip-gallery-hero__sidebar">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Mountain peaks"
+                        class="trip-gallery-hero__top">
+                    <div class="trip-gallery-hero__bottom-row">
+                        <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=400"
+                            alt="Rocky terrain" class="trip-gallery-hero__small">
+                        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400"
+                            alt="Snowy mountains" class="trip-gallery-hero__small">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trip Content -->
+            <div class="trip-content">
+                <!-- Main Content -->
+                <div class="trip-main">
+                    <!-- Overview -->
+                    <div class="trip-info">
+                        <div class="trip-info__section">
+                            <h2 class="trip-info__title">Overview</h2>
+                            <p class="trip-info__text">
+                                Embark on an unforgettable journey through the wilderness of Patagonia. From towering
+                                glaciers to pristine lakes, rugged mountains to vast steppes, this trip offers the
+                                perfect blend of adventure, natural beauty, and authentic cultural experiences.
+                            </p>
+                            <p class="trip-info__text">
+                                Experience the raw power of nature as you trek through stunning landscapes, witness
+                                incredible wildlife, and connect with the spirit of one of the world's most remote and
+                                beautiful regions.
+                            </p>
+                        </div>
+
+                        <div class="trip-info__section">
+                            <h2 class="trip-info__title">What's Included</h2>
+                            <ul class="trip-info__list">
+                                <li class="trip-info__item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    6 nights accommodation in boutique lodges
+                                </li>
+                                <li class="trip-info__item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    Daily breakfast and 3 gourmet dinners
+                                </li>
+                                <li class="trip-info__item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    Airport transfers and all transportation
+                                </li>
+                                <li class="trip-info__item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    Professional English-speaking guides
+                                </li>
+                                <li class="trip-info__item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    All entrance fees to national parks
+                                </li>
+                                <li class="trip-info__item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#222"
+                                        stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                    Trekking equipment and safety gear
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Gallery -->
+                    <div class="trip-gallery">
+                        <h2 class="trip-gallery__title">Gallery</h2>
+                        <div class="trip-gallery__grid">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400"
+                                alt="Mountain peak" class="trip-gallery__image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400"
+                                alt="Valley view" class="trip-gallery__image">
+                            <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=400"
+                                alt="Rocky path" class="trip-gallery__image">
+                            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=400"
+                                alt="Snowy peaks" class="trip-gallery__image">
+                            <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=400"
+                                alt="Sunrise view" class="trip-gallery__image">
+                            <img src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=400"
+                                alt="Mountain trail" class="trip-gallery__image">
+                        </div>
+                    </div>
+
+                    <!-- Itinerary -->
+                    <div class="trip-itinerary">
+                        <h2 class="trip-itinerary__title">Itinerary</h2>
+
+                        <div class="itinerary-day">
+                            <div class="itinerary-day__number">1</div>
+                            <div class="itinerary-day__content">
+                                <h3 class="itinerary-day__title">Arrival in El Calafate</h3>
+                                <p class="itinerary-day__desc">Welcome to Patagonia! Upon arrival at El Calafate
+                                    Airport, you'll be greeted and transferred to your boutique lodge overlooking the
+                                    lake.</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="itinerary-day__number">2</div>
+                            <div class="itinerary-day__content">
+                                <h3 class="itinerary-day__title">Perito Moreno Glacier</h3>
+                                <p class="itinerary-day__desc">Visit the magnificent Perito Moreno Glacier. Walk along
+                                    the viewing platforms and witness massive chunks of ice calving into the lake.</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="itinerary-day__number">3</div>
+                            <div class="itinerary-day__content">
+                                <h3 class="itinerary-day__title">Transfer to El Chaltén</h3>
+                                <p class="itinerary-day__desc">Scenic drive to El Chaltén, the trekking capital of
+                                    Argentina. Afternoon exploration of the charming mountain village.</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="itinerary-day__number">4</div>
+                            <div class="itinerary-day__content">
+                                <h3 class="itinerary-day__title">Fitz Roy Trek</h3>
+                                <p class="itinerary-day__desc">Full-day trek to Laguna de los Tres for stunning views of
+                                    Mount Fitz Roy. One of the most iconic hikes in Patagonia.</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="itinerary-day__number">5</div>
+                            <div class="itinerary-day__content">
+                                <h3 class="itinerary-day__title">Torre Glacier Hike</h3>
+                                <p class="itinerary-day__desc">Hike to Cerro Torre base camp. Marvel at the jagged spire
+                                    and the stunning glacier lake at its base.</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="itinerary-day__number">6</div>
+                            <div class="itinerary-day__content">
+                                <h3 class="itinerary-day__title">Leisure Day</h3>
+                                <p class="itinerary-day__desc">Free day to explore at your own pace. Optional activities
+                                    include rock climbing, horseback riding, or relaxing at the spa.</p>
+                            </div>
+                        </div>
+
+                        <div class="itinerary-day">
+                            <div class="itinerary-day__number">7</div>
+                            <div class="itinerary-day__content">
+                                <h3 class="itinerary-day__title">Departure</h3>
+                                <p class="itinerary-day__desc">Enjoy a farewell breakfast before your transfer to El
+                                    Calafate Airport for your departure flight. ¡Hasta pronto!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonials Section -->
+                    <div class="trip-testimonials">
+                        <h2 class="trip-testimonials__title">Testimonials</h2>
+
+                        <div class="testimonial">
+                            <div class="testimonial__header">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100"
+                                    alt="Lisa Miller" class="testimonial__avatar">
+                                <div>
+                                    <p class="testimonial__name">Lisa Miller</p>
+                                    <div class="testimonial__rating">
+                                        <span class="testimonial__stars">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial__text">"An absolutely life-changing experience! The guides were
+                                incredibly knowledgeable and the landscapes took my breath away. Every detail was
+                                perfectly planned."</p>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial__header">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100"
+                                    alt="Mike Petrucci" class="testimonial__avatar">
+                                <div>
+                                    <p class="testimonial__name">Mike Petrucci</p>
+                                    <div class="testimonial__rating">
+                                        <span class="testimonial__stars">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial__text">"The best adventure trip I've ever taken. The accommodations
+                                were top-notch and the itinerary was perfectly balanced between adventure and
+                                relaxation."</p>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testimonial__header">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100"
+                                    alt="Kate Tiffo" class="testimonial__avatar">
+                                <div>
+                                    <p class="testimonial__name">Kate Tiffo</p>
+                                    <div class="testimonial__rating">
+                                        <span class="testimonial__stars">★★★★★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial__text">"I can't recommend this trip enough! From the stunning glaciers
+                                to the towering mountains, every moment was magical. Will definitely book again!"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar - Booking Card -->
+                <aside class="trip-sidebar">
+                    <div class="booking-card">
+                        <div class="booking-card__price-row">
+                            <span class="booking-card__price">$3,200</span>
+                            <span class="booking-card__period">/ person</span>
+                        </div>
+
+                        <div class="booking-card__details">
+                            <div class="booking-card__row">
+                                <span class="booking-card__label">Duration</span>
+                                <span class="booking-card__value">7 Days / 6 Nights</span>
+                            </div>
+
+                            <div class="booking-card__row">
+                                <span class="booking-card__label">Group Size</span>
+                                <span class="booking-card__value">Max 12 people</span>
+                            </div>
+
+                            <div class="booking-card__row">
+                                <span class="booking-card__label">Next Available</span>
+                                <span class="booking-card__value">Jan 15, 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="booking-card__divider"></div>
+
+                        <div class="booking-card__details">
+                            <div class="booking-card__row">
+                                <span class="booking-card__label">Base Price</span>
+                                <span class="booking-card__value">$3,200</span>
+                            </div>
+
+                            <div class="booking-card__row">
+                                <span class="booking-card__label">Taxes & Fees</span>
+                                <span class="booking-card__value">$350</span>
+                            </div>
+                        </div>
+
+                        <div class="booking-card__total">
+                            <span>Total</span>
+                            <span>$3,550</span>
+                        </div>
+
+                        <a href="contact.html" class="btn btn--dark booking-card__btn">Book This Trip</a>
+                        <p class="booking-card__note">Free cancellation up to 30 days before departure</p>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Explore All Our Trips Section -->
+            <section class="related-trips">
+                <div class="related-trips__header">
+                    <h2 class="text-h2 related-trips__title">Explore All Our Trips</h2>
+                    <p class="related-trips__subtitle">There's a whole world out there waiting to be explored.</p>
+                </div>
+
+                <div class="related-trips__grid">
+                    <a href="trip-details.html" class="related-card">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=500" alt="Bali Temple"
+                            class="related-card__image">
+                        <div class="related-card__content">
+                            <h3 class="related-card__title">Bali, Indonesia</h3>
+                            <p class="related-card__price">From $1,299 / person</p>
+                        </div>
+                    </a>
+
+                    <a href="trip-details.html" class="related-card">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=500" alt="Taj Mahal"
+                            class="related-card__image">
+                        <div class="related-card__content">
+                            <h3 class="related-card__title">Rajasthan, India</h3>
+                            <p class="related-card__price">From $2,199 / person</p>
+                        </div>
+                    </a>
+
+                    <a href="trip-details.html" class="related-card">
+                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?w=500" alt="Venice"
+                            class="related-card__image">
+                        <div class="related-card__content">
+                            <h3 class="related-card__title">Venice, Italy</h3>
+                            <p class="related-card__price">From $2,499 / person</p>
+                        </div>
+                    </a>
+
+                    <a href="trip-details.html" class="related-card">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=500" alt="Kyoto Temple"
+                            class="related-card__image">
+                        <div class="related-card__content">
+                            <h3 class="related-card__title">Kyoto, Japan</h3>
+                            <p class="related-card__price">From $2,899 / person</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Journey CTA Card (rounded card with background image) -->
+            <section class="journey-cta-card">
+                <div class="journey-cta-card__inner">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400"
+                        alt="Mountain landscape" class="journey-cta-card__bg">
+                    <div class="journey-cta-card__overlay"></div>
+                    <div class="journey-cta-card__content">
+                        <h2 class="journey-cta-card__title">Ready To Start<br>Your Journey?</h2>
+                        <p class="journey-cta-card__desc">Let's design the perfect trip, tailored just for you.</p>
+                        <a href="contact.html" class="btn btn--primary">Plan Your Adventure</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Enhanced Footer -->
+        <footer class="footer-enhanced">
+            <span class="footer-enhanced__bg-text">SCAPIA</span>
+
+            <div class="footer-enhanced__container">
+                <div class="footer-enhanced__brand">
+                    <span class="footer-enhanced__logo">SCAPIA</span>
+                    <p class="footer-enhanced__desc">Explore the world effortlessly with Scapia, your trusted travel
+                        partner. We bring unforgettable journeys to life with expert planning, personalized services,
+                        and a commitment to excellence.</p>
+
+                    <div class="footer-enhanced__contact">
+                        <div class="footer-enhanced__contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            <span>456 Explorer Lane, New York, NY 10001</span>
+                        </div>
+                        <div class="footer-enhanced__contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72" />
+                            </svg>
+                            <span>+1 (234) 567-8900</span>
+                        </div>
+                        <div class="footer-enhanced__contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            <span>hello@scapiatravel.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-enhanced__column">
+                    <h4 class="footer-enhanced__title">Quick Links</h4>
+                    <div class="footer-enhanced__links">
+                        <a href="index.html" class="footer-enhanced__link">Home</a>
+                        <a href="trip-details.html" class="footer-enhanced__link">Destinations</a>
+                        <a href="trip-details.html" class="footer-enhanced__link">Trips</a>
+                        <a href="about.html" class="footer-enhanced__link">Services</a>
+                        <a href="blog.html" class="footer-enhanced__link">Blog</a>
+                        <a href="contact.html" class="footer-enhanced__link">Contact Us</a>
+                    </div>
+                </div>
+
+                <div class="footer-enhanced__column">
+                    <h4 class="footer-enhanced__title">Follow Us</h4>
+                    <div class="footer-enhanced__social">
+                        <a href="#" class="footer-enhanced__social-link" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-enhanced__social-link" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a href="#" class="footer-enhanced__social-link" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-enhanced__newsletter">
+                    <p class="footer-enhanced__newsletter-text">Get the latest travel deals, tips, and destination
+                        inspirations straight to your inbox.</p>
+                    <form class="footer-enhanced__newsletter-form">
+                        <input type="email" class="footer-enhanced__newsletter-input" placeholder="Enter your email">
+                        <button type="submit" class="footer-enhanced__newsletter-btn">Send</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-enhanced__bottom">
+                <p>2030 Scapia Travel Agency. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

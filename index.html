@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="SCAPIA - Explore destinations you've only imagined. Book flights, hotels, and travel packages for your next adventure.">
+  <title>SCAPIA - Travel & Adventure</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+
+<body>
+  <div class="page">
+    <!-- Navigation -->
+    <nav class="nav">
+      <a href="index.html" class="nav__logo">SCAPIA</a>
+
+      <div class="nav__menu" id="navMenu">
+        <a href="index.html" class="nav__link nav__link--active">Home</a>
+        <a href="about.html" class="nav__link">About Us</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </div>
+
+      <div class="nav__actions">
+        <button class="nav__lang-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>EN</span>
+        </button>
+      </div>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero__container"
+          style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400');">
+          <h1 class="hero__title">Let's Explore destinations you've only imagined.</h1>
+          <div class="hero__content">
+            <p class="hero__desc">Explore new horizons, experience new cultures, and create lasting memories.</p>
+            <a href="trip-details.html" class="btn btn--primary">Book Your Trip</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services">
+        <div class="services__header">
+          <h2 class="services__title">Step Into Your Gateway to Smooth, Stress-Free, and Seamless Travel</h2>
+          <p class="services__subtitle">Experience a world of convenience and adventure with our trusted services.</p>
+        </div>
+
+        <div class="services__grid">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 50 50" fill="none" stroke="#222222" stroke-width="1.5">
+                <path d="M25 8L42 18L38 42H12L8 18L25 8Z" />
+                <path d="M8 18L25 28L42 18" />
+                <path d="M25 28V42" />
+              </svg>
+            </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Flight Booking</h3>
+              <p class="service-card__desc">Find the best routes and prices with ease for your next adventure.</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 50 50" fill="none" stroke="#222222" stroke-width="1.5">
+                <rect x="8" y="18" width="34" height="24" rx="2" />
+                <path d="M8 26H42" />
+                <path d="M18 18V12H32V18" />
+                <rect x="20" y="30" width="10" height="8" />
+              </svg>
+            </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Hotel Reservations</h3>
+              <p class="service-card__desc">Book the perfect stay, from budget-friendly to luxury escapes.</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 50 50" fill="none" stroke="#222222" stroke-width="1.5">
+                <rect x="10" y="8" width="30" height="34" rx="2" />
+                <path d="M16 16H34" />
+                <path d="M16 24H34" />
+                <path d="M16 32H26" />
+              </svg>
+            </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Travel Planning</h3>
+              <p class="service-card__desc">Get personalized itineraries crafted by travel experts.</p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 50 50" fill="none" stroke="#222222" stroke-width="1.5">
+                <rect x="8" y="14" width="34" height="26" rx="2" />
+                <path d="M8 22H42" />
+                <path d="M16 30H20" />
+                <path d="M26 30H34" />
+              </svg>
+            </div>
+            <div class="service-card__content">
+              <h3 class="service-card__title">Travel Packages</h3>
+              <p class="service-card__desc">Explore curated packages for hassle-free travel experiences.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Trip Section -->
+      <section class="featured">
+        <div class="featured__info">
+          <h2 class="featured__title">Discover Our Handpicked Destinations</h2>
+          <p class="featured__desc">Experience a world of convenience and adventure with our trusted services.</p>
+        </div>
+
+        <div class="featured__gallery">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800" alt="Bali, Indonesia"
+            class="featured__img-main">
+
+          <div class="featured__side">
+            <div class="featured__card">
+              <h3 class="featured__card-title">Bali, Indonesia</h3>
+              <p class="featured__card-desc">Soak up the tropical beauty of Bali, where stunning beaches
+                meet vibrant culture and lush landscapes.</p>
+            </div>
+
+            <div class="featured__bottom">
+              <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600" alt="Bali Temple"
+                class="featured__img-small">
+
+              <a href="trip-details.html" class="btn--link featured__action">
+                <span>View Details</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trip Categories Section -->
+      <section class="categories">
+        <div class="categories__header">
+          <h2 class="categories__title">Explore Handpicked Destinations and Find the Perfect Trip for You</h2>
+          <p class="categories__subtitle">Embark on unforgettable journeys with Scapia as your guide.</p>
+        </div>
+
+        <div class="categories__grid">
+          <!-- Row 1 -->
+          <div class="categories__row">
+            <div class="category-card category-card--large"
+              style="background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800');">
+              <div class="category-card__content">
+                <h3 class="category-card__title">Family Holidays</h3>
+                <p class="category-card__desc">Fun-filled trips everyone in the family will love.</p>
+              </div>
+            </div>
+
+            <div class="category-card category-card--medium"
+              style="background-image: url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=800');">
+              <div class="category-card__content">
+                <h3 class="category-card__title">Adventure Travel</h3>
+                <p class="category-card__desc">Thrilling experiences for the bold explorer in you.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="categories__row">
+            <div class="category-card category-card--medium"
+              style="background-image: url('https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800');">
+              <div class="category-card__content">
+                <h3 class="category-card__title">Beach Getaways</h3>
+                <p class="category-card__desc">Relax on pristine beaches around the world.</p>
+              </div>
+            </div>
+
+            <div class="category-card category-card--large"
+              style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800');">
+              <div class="category-card__content">
+                <h3 class="category-card__title">Nature Escapes</h3>
+                <p class="category-card__desc">Reconnect with nature in breathtaking landscapes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="why-us">
+        <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=800" alt="Happy travelers"
+          class="why-us__image">
+
+        <div class="why-us__content">
+          <h2 class="why-us__title">Explore the World with Confidence and Style</h2>
+
+          <div class="why-us__cards">
+            <div class="why-card">
+              <div class="why-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <path d="M14 2v6h6" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <line x1="10" y1="9" x2="8" y2="9" />
+                </svg>
+              </div>
+              <div class="why-card__content">
+                <h4 class="why-card__title">Expert Planning</h4>
+                <p class="why-card__desc">Years of experience delivering tailor-made travel experiences.</p>
+              </div>
+            </div>
+
+            <div class="why-card">
+              <div class="why-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+              <div class="why-card__content">
+                <h4 class="why-card__title">24/7 Support</h4>
+                <p class="why-card__desc">Our team is always available to assist you during your travels.</p>
+              </div>
+            </div>
+
+            <div class="why-card">
+              <div class="why-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2">
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
+              </div>
+              <div class="why-card__content">
+                <h4 class="why-card__title">Personalized Trips</h4>
+                <p class="why-card__desc">Every trip is customized to match your preferences and style.</p>
+              </div>
+            </div>
+
+            <div class="why-card">
+              <div class="why-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#222222" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20" />
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </div>
+              <div class="why-card__content">
+                <h4 class="why-card__title">Global Destinations</h4>
+                <p class="why-card__desc">Access to thousands of destinations around the world.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Section -->
+      <section class="video-section">
+        <div class="video-section__header">
+          <h2 class="video-section__title">Moments That Inspire Wanderlust</h2>
+          <p class="video-section__subtitle">Dive into the beauty of unforgettable journeys captured through our lens.
+          </p>
+        </div>
+
+        <div class="video-section__player">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1400" alt="Travel video thumbnail"
+            class="video-section__thumbnail">
+          <button class="video-section__play" aria-label="Play video">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="#222222">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Promotions Section -->
+      <section class="promotions">
+        <div class="promotions__header">
+          <h2 class="promotions__title">Explore Unmissable Travel Deals Tailored Just for You</h2>
+          <p class="promotions__subtitle">Discover exclusive offers curated just for you — from last-minute escapes to
+            premium getaways.</p>
+        </div>
+
+        <div class="promotions__grid">
+          <div class="voucher-card"
+            style="background-image: url('https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800');">
+            <span class="voucher-card__badge">Handpicked destinations with premium experiences</span>
+            <div class="voucher-card__content">
+              <div class="voucher-card__info">
+                <h3 class="voucher-card__title">Travel More, Spend Less</h3>
+                <p class="voucher-card__subtitle">*Flexible booking and cancellation policies</p>
+              </div>
+              <div class="voucher-card__discount">
+                <span class="voucher-card__discount-label">Discount up to</span>
+                <div class="voucher-card__discount-value">
+                  <span class="voucher-card__discount-number">40</span>
+                  <span class="voucher-card__discount-percent">%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="voucher-card"
+            style="background-image: url('https://images.unsplash.com/photo-1499678329028-101435549a4e?w=800');">
+            <span class="voucher-card__badge">Limited time offer - Save big on your next trip</span>
+            <div class="voucher-card__content">
+              <div class="voucher-card__info">
+                <h3 class="voucher-card__title">Adventure Awaits</h3>
+                <p class="voucher-card__subtitle">*Book now, travel anytime</p>
+              </div>
+              <div class="voucher-card__discount">
+                <span class="voucher-card__discount-label">Discount up to</span>
+                <div class="voucher-card__discount-value">
+                  <span class="voucher-card__discount-number">30</span>
+                  <span class="voucher-card__discount-percent">%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta">
+        <div class="cta__container">
+          <h2 class="cta__title">Ready to Start Your Adventure?</h2>
+          <p class="cta__desc">Join thousands of happy travelers who have explored the world with SCAPIA.</p>
+          <a href="contact.html" class="btn btn--primary cta__btn">Get Started Today</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__brand">
+          <span class="footer__logo">SCAPIA</span>
+          <p class="footer__desc">Your gateway to extraordinary travel experiences around the world.</p>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Quick Links</h4>
+          <div class="footer__links">
+            <a href="index.html" class="footer__link">Home</a>
+            <a href="about.html" class="footer__link">About Us</a>
+            <a href="blog.html" class="footer__link">Blog</a>
+            <a href="contact.html" class="footer__link">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Destinations</h4>
+          <div class="footer__links">
+            <a href="trip-details.html" class="footer__link">Bali, Indonesia</a>
+            <a href="trip-details.html" class="footer__link">Paris, France</a>
+            <a href="trip-details.html" class="footer__link">Tokyo, Japan</a>
+            <a href="trip-details.html" class="footer__link">New York, USA</a>
+          </div>
+        </div>
+
+        <div class="footer__column">
+          <h4 class="footer__title">Support</h4>
+          <div class="footer__links">
+            <a href="#" class="footer__link">FAQs</a>
+            <a href="#" class="footer__link">Privacy Policy</a>
+            <a href="#" class="footer__link">Terms of Service</a>
+            <a href="contact.html" class="footer__link">Help Center</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 SCAPIA. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

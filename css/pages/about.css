@@ -1,0 +1,387 @@
+/* ==========================================================================
+   About Page Styles - Pixel Perfect Figma Match
+   ========================================================================== */
+
+/* ==========================================================================
+   HERO - About
+   ========================================================================== */
+.about-hero {
+    padding: 100px 50px;
+    background-color: #FAFAFA;
+    text-align: center;
+}
+
+.about-hero__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-hero__title {
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: #222222;
+    margin-bottom: 24px;
+}
+
+.about-hero__desc {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+/* ==========================================================================
+   STORY SECTION
+   ========================================================================== */
+.story {
+    display: flex;
+    gap: 50px;
+    padding: 100px 50px;
+    background-color: #FFFFFF;
+    align-items: center;
+}
+
+.story__image {
+    width: 50%;
+    border-radius: 16px;
+    object-fit: cover;
+    height: 500px;
+}
+
+.story__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.story__title {
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.story__text {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+/* ==========================================================================
+   VALUES SECTION
+   ========================================================================== */
+.values {
+    padding: 100px 50px;
+    background-color: #FAFAFA;
+}
+
+.values__header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.values__title {
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: #222222;
+    margin-bottom: 16px;
+}
+
+.values__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #7C7C7C;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.values__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1340px;
+    margin: 0 auto;
+}
+
+.value-card {
+    text-align: center;
+    padding: 32px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+}
+
+.value-card__icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAFAFA;
+    border-radius: 8px;
+}
+
+.value-card__title {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 12px;
+}
+
+.value-card__desc {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+/* ==========================================================================
+   TEAM SECTION
+   ========================================================================== */
+.team {
+    padding: 100px 50px;
+    background-color: #FFFFFF;
+}
+
+.team__header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.team__title {
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: #222222;
+    margin-bottom: 16px;
+}
+
+.team__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    max-width: 1340px;
+    margin: 0 auto;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-card__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.team-card__name {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.team-card__role {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+/* ==========================================================================
+   STATS SECTION
+   ========================================================================== */
+.stats {
+    padding: 100px 50px;
+    background-color: #222222;
+}
+
+.stats__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    max-width: 1340px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stat-card__number {
+    font-size: 64px;
+    line-height: 72px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.stat-card__label {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==========================================================================
+   RESPONSIVE - TABLET
+   ========================================================================== */
+@media (max-width: 1023px) {
+    .story {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .story__image,
+    .story__content {
+        width: 100%;
+    }
+
+    .story__image {
+        height: 400px;
+    }
+
+    .values__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .team__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE - MOBILE
+   ========================================================================== */
+@media (max-width: 767px) {
+    .about-hero {
+        padding: 50px 16px;
+    }
+
+    .about-hero__title {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -1px;
+    }
+
+    .about-hero__desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .story {
+        padding: 50px 16px;
+    }
+
+    .story__image {
+        height: 300px;
+    }
+
+    .story__title {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -1px;
+    }
+
+    .story__text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .values {
+        padding: 50px 16px;
+    }
+
+    .values__header {
+        margin-bottom: 32px;
+    }
+
+    .values__title {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -1px;
+    }
+
+    .values__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .values__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .value-card {
+        padding: 24px;
+    }
+
+    .team {
+        padding: 50px 16px;
+    }
+
+    .team__header {
+        margin-bottom: 32px;
+    }
+
+    .team__title {
+        font-size: 32px;
+        line-height: 42px;
+        letter-spacing: -1px;
+    }
+
+    .team__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .team__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .stats {
+        padding: 50px 16px;
+    }
+
+    .stats__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .stat-card__number {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .stat-card__label {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}

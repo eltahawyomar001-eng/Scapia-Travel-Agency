@@ -1,0 +1,1197 @@
+/* ===================================
+   Homepage Styles - Pixel Perfect to Figma
+   Container: 1340px, Page: 1440px
+   =================================== */
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    padding: 0 50px 40px;
+    background: #FFFFFF;
+}
+
+.hero__container {
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+    height: 684px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 50px;
+    gap: 40px;
+}
+
+.hero__title {
+    width: 886px;
+    max-width: 100%;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 90px;
+    letter-spacing: -3px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.hero__content {
+    width: 334px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.hero__desc {
+    width: 334px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.btn--primary {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px 16px;
+    gap: 8px;
+    background: #FAFAFA;
+    border-radius: 8px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #222222;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn--primary:hover {
+    background: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 50px 50px 100px;
+    gap: 50px;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.services__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0;
+    gap: 50px;
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+}
+
+.services__title {
+    width: 511px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #222222;
+    margin: 0;
+}
+
+.services__subtitle {
+    width: 438px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+.services__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    gap: 24px;
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    gap: 50px;
+    flex: 1;
+    border-radius: 12px;
+}
+
+.service-card__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.service-card__icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.service-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 16px;
+}
+
+.service-card__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #222222;
+    margin: 0;
+}
+
+.service-card__desc {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+/* Featured Trip Section */
+.featured {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 100px 50px;
+    gap: 50px;
+    width: 100%;
+    background: #FAFAFA;
+}
+
+.featured__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 40px;
+    width: 433px;
+    flex-shrink: 0;
+}
+
+.featured__title {
+    width: 100%;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #222222;
+    margin: 0;
+}
+
+.featured__desc {
+    width: 100%;
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+.featured__gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 24px;
+    flex: 1;
+    height: 500px;
+}
+
+.featured__img-main {
+    flex: 1;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.featured__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    gap: 24px;
+    flex: 1;
+    height: 100%;
+}
+
+.featured__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 16px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.featured__card-title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #222222;
+    margin: 0;
+}
+
+.featured__card-desc {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+.featured__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    gap: 24px;
+    width: 100%;
+    height: auto;
+}
+
+.featured__img-small {
+    flex: 1;
+    width: 100%;
+    height: 296px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.btn--link,
+.featured__action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 15px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #222222;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.btn--link:hover,
+.featured__action:hover {
+    gap: 20px;
+}
+
+/* Trip Category Section */
+.categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 100px 50px;
+    gap: 50px;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.categories__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    gap: 40px;
+    width: 100%;
+    max-width: 1340px;
+}
+
+.categories__title {
+    width: 724px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #222222;
+    margin: 0;
+}
+
+.categories__subtitle {
+    flex: 1;
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+.categories__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 24px;
+    width: 100%;
+    max-width: 1340px;
+}
+
+.categories__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 24px;
+    width: 100%;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 24px;
+    gap: 20px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+/* Category card sizes based on Figma */
+.category-card--large {
+    width: 658px;
+    flex-shrink: 0;
+}
+
+.category-card--medium {
+    flex: 1;
+}
+
+.category-card__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 8px;
+    width: 100%;
+}
+
+.category-card__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.category-card__desc {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Why Choose Us Section - Figma Exact */
+.why-us {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 100px 50px;
+    gap: 50px;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.why-us__image {
+    width: 645px;
+    height: 612px;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.why-us__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    width: 645px;
+    flex-grow: 1;
+}
+
+.why-us__title {
+    width: 100%;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #222222;
+    margin: 0;
+}
+
+.why-us__cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.why-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 0 24px;
+    gap: 16px;
+    width: 100%;
+    border-bottom: 1px solid #E3E8EF;
+}
+
+.why-card__icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 44px;
+    height: 44px;
+    background: #FAFAFA;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.why-card__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.why-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1;
+}
+
+.why-card__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #222222;
+    margin: 0;
+}
+
+.why-card__desc {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+/* Video Section - Figma Exact */
+.video-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+    width: 100%;
+    background: #FFFFFF;
+    isolation: isolate;
+}
+
+.video-section__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1340px;
+}
+
+.video-section__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #222222;
+    margin: 0;
+}
+
+.video-section__subtitle {
+    width: 100%;
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+.video-section__player {
+    position: relative;
+    width: 100%;
+    max-width: 1340px;
+    height: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.video-section__thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-section__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0 18px 4px;
+    width: 70px;
+    height: 70px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.video-section__play:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-section__play svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Promotions Section - Figma Exact */
+.promotions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    gap: 50px;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.promotions__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+    width: 100%;
+    max-width: 1340px;
+}
+
+.promotions__title {
+    width: 724px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #222222;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.promotions__subtitle {
+    width: 576px;
+    flex: 1;
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+.promotions__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 1340px;
+}
+
+.voucher-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 32px;
+    gap: 32px;
+    width: 658px;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.voucher-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.voucher-card__badge {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    background: #FFFFFF;
+    border-radius: 500px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    color: #222222;
+    opacity: 0.9;
+}
+
+.voucher-card__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 72px;
+    width: 100%;
+}
+
+.voucher-card__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.voucher-card__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.voucher-card__subtitle {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.voucher-card__discount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.voucher-card__discount-label {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.voucher-card__discount-value {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.voucher-card__discount-number {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 100px;
+    line-height: 80px;
+    letter-spacing: -5px;
+    color: #FFFFFF;
+    margin: 0 -20px 0 0;
+}
+
+.voucher-card__discount-percent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    background: #222222;
+    border-radius: 500px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+/* CTA Section */
+.cta {
+    display: flex;
+    justify-content: center;
+    padding: 100px 50px;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.cta__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 50px;
+    gap: 32px;
+    width: 100%;
+    max-width: 1340px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 24px;
+    text-align: center;
+}
+
+.cta__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.cta__desc {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0;
+}
+
+.cta__btn {
+    background: #FFFFFF;
+    color: #222222;
+}
+
+.cta__btn:hover {
+    background: #FAFAFA;
+}
+
+/* ===================================
+   Responsive Styles
+   =================================== */
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 0 24px 24px;
+    }
+
+    .hero__container {
+        height: auto;
+        min-height: 500px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 40px;
+    }
+
+    .hero__title {
+        width: 100%;
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .hero__content {
+        width: 100%;
+    }
+
+    .hero__desc {
+        width: 100%;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .services {
+        padding: 50px 24px 80px;
+    }
+
+    .services__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .services__title {
+        width: 100%;
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .services__subtitle {
+        width: 100%;
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .services__grid {
+        flex-wrap: wrap;
+    }
+
+    .service-card {
+        flex: 0 0 calc(50% - 12px);
+    }
+
+    .featured {
+        flex-direction: column;
+        padding: 60px 24px;
+    }
+
+    .featured__info {
+        width: 100%;
+    }
+
+    .featured__title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .featured__desc {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .featured__gallery {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .featured__img-main {
+        height: 300px;
+    }
+
+    .featured__side {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .featured__card {
+        flex: 1;
+    }
+
+    .featured__img-small {
+        flex: 1;
+        height: 200px;
+    }
+
+    .categories {
+        padding: 60px 24px;
+    }
+
+    .categories__header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .categories__title {
+        width: 100%;
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .categories__subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .categories__grid .category-card {
+        flex: 0 0 calc(50% - 12px);
+        height: 300px;
+    }
+
+    .category-card--large {
+        width: auto;
+        flex: 0 0 calc(50% - 12px);
+    }
+
+    .category-card__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .category-card__desc {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .why-us {
+        flex-direction: column;
+        padding: 60px 24px;
+    }
+
+    .why-us__image {
+        width: 100%;
+        height: 350px;
+    }
+
+    .why-us__title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .why-us__subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .video-section {
+        padding: 60px 24px;
+    }
+
+    .video-section__title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .video-section__subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .promotions {
+        padding: 60px 24px;
+    }
+
+    .promotions__header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .promotions__title {
+        width: 100%;
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .promotions__subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .promotions__grid {
+        flex-direction: column;
+    }
+
+    .voucher-card {
+        height: 300px;
+    }
+
+    .cta {
+        padding: 60px 24px;
+    }
+
+    .cta__container {
+        padding: 50px 24px;
+    }
+
+    .cta__title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .cta__desc {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__container {
+        min-height: 400px;
+        padding: 24px;
+    }
+
+    .hero__title {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -1px;
+    }
+
+    .hero__content {
+        gap: 24px;
+    }
+
+    .hero__desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .services__grid {
+        flex-direction: column;
+    }
+
+    .service-card {
+        flex: 0 0 100%;
+        gap: 24px;
+    }
+
+    .service-card__title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .service-card__desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .featured__side {
+        flex-direction: column;
+    }
+
+    .featured__img-small {
+        height: 200px;
+    }
+
+    .categories__grid .category-card {
+        flex: 0 0 100%;
+        height: 250px;
+    }
+
+    .category-card--large {
+        flex: 0 0 100%;
+    }
+
+    .why-us__cards {
+        gap: 16px;
+    }
+
+    .why-card {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .promotions__grid .voucher-card {
+        height: 280px;
+    }
+
+    .cta__container {
+        padding: 40px 20px;
+    }
+
+    .cta__title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .cta__desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
