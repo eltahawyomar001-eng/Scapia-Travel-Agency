@@ -28,6 +28,12 @@
                         media_folder: 'images/uploads',
                         public_folder: '/images/uploads',
                         site_url: 'https://scapia-travel-agency.vercel.app',
+                        logo_url: '/images/logo.png',
+                        slug: {
+                            encoding: 'ascii',
+                            clean_accents: true,
+                            sanitize_replacement: '-'
+                        },
                         collections: [
                             {
                                 name: 'trips',
@@ -41,22 +47,128 @@
                                     { label: 'Short Description', name: 'excerpt', widget: 'text' },
                                     { label: 'Full Description', name: 'description', widget: 'markdown' },
                                     { label: 'Featured Image', name: 'image', widget: 'image' },
+                                    {
+                                        label: 'Gallery Images',
+                                        name: 'gallery',
+                                        widget: 'list',
+                                        field: { label: 'Image', name: 'image', widget: 'image' }
+                                    },
                                     { label: 'Price', name: 'price', widget: 'number', value_type: 'int', min: 0 },
                                     { label: 'Duration', name: 'duration', widget: 'string' },
+                                    { label: 'Dates', name: 'dates', widget: 'string' },
                                     { label: 'Group Size', name: 'groupSize', widget: 'string' },
                                     {
                                         label: 'Category',
                                         name: 'category',
                                         widget: 'select',
-                                        options: ['family', 'adventure', 'beach', 'nature', 'cultural']
+                                        options: [
+                                            { label: 'Family Holidays', value: 'family' },
+                                            { label: 'Adventure Travel', value: 'adventure' },
+                                            { label: 'Beach Getaways', value: 'beach' },
+                                            { label: 'Nature Escapes', value: 'nature' },
+                                            { label: 'Cultural Tours', value: 'cultural' },
+                                            { label: 'Romantic Getaways', value: 'romantic' },
+                                            { label: 'Island Retreats', value: 'island' }
+                                        ]
                                     },
-                                    { label: 'Is Featured', name: 'featured', widget: 'boolean', default: false }
+                                    { label: 'Tour Type', name: 'tourType', widget: 'string' },
+                                    { label: 'Accommodation', name: 'accommodation', widget: 'string' },
+                                    {
+                                        label: "What's Included",
+                                        name: 'included',
+                                        widget: 'list',
+                                        field: { label: 'Item', name: 'item', widget: 'string' }
+                                    },
+                                    {
+                                        label: 'Itinerary',
+                                        name: 'itinerary',
+                                        widget: 'list',
+                                        fields: [
+                                            { label: 'Day', name: 'day', widget: 'number' },
+                                            { label: 'Title', name: 'title', widget: 'string' },
+                                            { label: 'Description', name: 'description', widget: 'text' }
+                                        ]
+                                    },
+                                    { label: 'Is Featured', name: 'featured', widget: 'boolean', default: false },
+                                    { label: 'Is Best Seller', name: 'bestSeller', widget: 'boolean', default: false },
+                                    { label: 'Next Available Date', name: 'nextDate', widget: 'datetime', format: 'MMMM D, YYYY' }
                                 ]
                             },
                             {
                                 name: 'settings',
                                 label: 'Site Settings',
                                 files: [
+                                    {
+                                        label: 'Global Settings',
+                                        name: 'global',
+                                        file: 'content/settings/global.json',
+                                        fields: [
+                                            { label: 'Site Name', name: 'siteName', widget: 'string', default: 'SCAPIA' },
+                                            {
+                                                label: 'Navigation',
+                                                name: 'navigation',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Logo Text', name: 'logo', widget: 'string', default: 'SCAPIA' },
+                                                    {
+                                                        label: 'Navigation Links',
+                                                        name: 'links',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Label', name: 'label', widget: 'string' },
+                                                            { label: 'URL', name: 'url', widget: 'string' }
+                                                        ]
+                                                    },
+                                                    { label: 'Language Button Text', name: 'langButton', widget: 'string', default: 'EN' }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Footer',
+                                                name: 'footer',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Brand Description', name: 'description', widget: 'text' },
+                                                    { label: 'Address', name: 'address', widget: 'string' },
+                                                    { label: 'Phone', name: 'phone', widget: 'string' },
+                                                    { label: 'Email', name: 'email', widget: 'string' },
+                                                    {
+                                                        label: 'Quick Links',
+                                                        name: 'quickLinks',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Label', name: 'label', widget: 'string' },
+                                                            { label: 'URL', name: 'url', widget: 'string' }
+                                                        ]
+                                                    },
+                                                    {
+                                                        label: 'Social Links',
+                                                        name: 'socialLinks',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Platform', name: 'platform', widget: 'string' },
+                                                            { label: 'URL', name: 'url', widget: 'string' },
+                                                            { label: 'Abbreviation', name: 'abbr', widget: 'string' }
+                                                        ]
+                                                    },
+                                                    { label: 'Newsletter Text', name: 'newsletterText', widget: 'text' },
+                                                    { label: 'Newsletter Button Text', name: 'newsletterButton', widget: 'string', default: 'Send' },
+                                                    { label: 'Copyright Text', name: 'copyright', widget: 'string' }
+                                                ]
+                                            },
+                                            {
+                                                label: 'CTA Section',
+                                                name: 'cta',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Description', name: 'description', widget: 'string' },
+                                                    { label: 'Button Text', name: 'buttonText', widget: 'string' },
+                                                    { label: 'Button URL', name: 'buttonUrl', widget: 'string' },
+                                                    { label: 'Background Image', name: 'backgroundImage', widget: 'image' }
+                                                ]
+                                            }
+                                        ]
+                                    },
                                     {
                                         label: 'Homepage',
                                         name: 'homepage',
@@ -68,7 +180,524 @@
                                                 widget: 'object',
                                                 fields: [
                                                     { label: 'Title', name: 'title', widget: 'string' },
-                                                    { label: 'Description', name: 'description', widget: 'text' }
+                                                    { label: 'Description', name: 'description', widget: 'text' },
+                                                    { label: 'Button Text', name: 'buttonText', widget: 'string' },
+                                                    { label: 'Button URL', name: 'buttonUrl', widget: 'string' },
+                                                    { label: 'Background Image', name: 'backgroundImage', widget: 'image' },
+                                                    {
+                                                        label: 'Stats',
+                                                        name: 'stats',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Number', name: 'number', widget: 'string' },
+                                                            { label: 'Label', name: 'label', widget: 'string' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Services Section',
+                                                name: 'services',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Service Cards',
+                                                        name: 'cards',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Icon', name: 'icon', widget: 'string' },
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Featured Trips Section',
+                                                name: 'featuredTrips',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    { label: 'View All Button Text', name: 'viewAllText', widget: 'string' },
+                                                    { label: 'View All URL', name: 'viewAllUrl', widget: 'string' }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Gallery Section',
+                                                name: 'gallery',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Images',
+                                                        name: 'images',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Image', name: 'image', widget: 'image' },
+                                                            { label: 'Alt Text', name: 'alt', widget: 'string' },
+                                                            { label: 'Location', name: 'location', widget: 'string' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Why Choose Section',
+                                                name: 'whyChoose',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Cards',
+                                                        name: 'cards',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Icon', name: 'icon', widget: 'string' },
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Testimonials Section',
+                                                name: 'testimonials',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Testimonials',
+                                                        name: 'items',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Quote', name: 'quote', widget: 'text' },
+                                                            { label: 'Author Name', name: 'author', widget: 'string' },
+                                                            { label: 'Author Role', name: 'role', widget: 'string' },
+                                                            { label: 'Author Image', name: 'image', widget: 'image', required: false },
+                                                            { label: 'Rating', name: 'rating', widget: 'number', min: 1, max: 5 }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        label: 'About Page',
+                                        name: 'about',
+                                        file: 'content/settings/about.json',
+                                        fields: [
+                                            {
+                                                label: 'Hero Section',
+                                                name: 'hero',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Description', name: 'description', widget: 'text' },
+                                                    {
+                                                        label: 'Images',
+                                                        name: 'images',
+                                                        widget: 'list',
+                                                        field: { label: 'Image', name: 'image', widget: 'image' }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Collective Section',
+                                                name: 'collective',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Description', name: 'description', widget: 'text' },
+                                                    {
+                                                        label: 'Stats',
+                                                        name: 'stats',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Number', name: 'number', widget: 'string' },
+                                                            { label: 'Label', name: 'label', widget: 'string' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Partner Logos',
+                                                name: 'partners',
+                                                widget: 'list',
+                                                fields: [
+                                                    { label: 'Name', name: 'name', widget: 'string' },
+                                                    { label: 'Logo Image', name: 'logo', widget: 'image', required: false }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Story Timeline Section',
+                                                name: 'storyTimeline',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    {
+                                                        label: 'Images',
+                                                        name: 'images',
+                                                        widget: 'list',
+                                                        field: { label: 'Image', name: 'image', widget: 'image' }
+                                                    },
+                                                    {
+                                                        label: 'Timeline Items',
+                                                        name: 'items',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Year', name: 'year', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Why Choose Section',
+                                                name: 'whyChoose',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Cards',
+                                                        name: 'cards',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Icon', name: 'icon', widget: 'string' },
+                                                            { label: 'Title', name: 'title', widget: 'string' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Team Section',
+                                                name: 'team',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Team Members',
+                                                        name: 'members',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Name', name: 'name', widget: 'string' },
+                                                            { label: 'Role', name: 'role', widget: 'string' },
+                                                            { label: 'Photo', name: 'image', widget: 'image' },
+                                                            {
+                                                                label: 'Social Links',
+                                                                name: 'social',
+                                                                widget: 'object',
+                                                                fields: [
+                                                                    { label: 'Facebook', name: 'facebook', widget: 'string', required: false },
+                                                                    { label: 'LinkedIn', name: 'linkedin', widget: 'string', required: false },
+                                                                    { label: 'Instagram', name: 'instagram', widget: 'string', required: false }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        label: 'Trips Page',
+                                        name: 'tripsPage',
+                                        file: 'content/settings/trips-page.json',
+                                        fields: [
+                                            {
+                                                label: 'Hero Section',
+                                                name: 'hero',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Description', name: 'description', widget: 'text' },
+                                                    { label: 'Image', name: 'image', widget: 'image' }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Trip Categories Section',
+                                                name: 'categories',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Category Cards',
+                                                        name: 'cards',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' },
+                                                            { label: 'Image', name: 'image', widget: 'image' },
+                                                            { label: 'Link URL', name: 'url', widget: 'string' },
+                                                            { label: 'Size', name: 'size', widget: 'select', options: ['large', 'flex'] }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Activities Section',
+                                                name: 'activities',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Activity Cards',
+                                                        name: 'cards',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' },
+                                                            { label: 'Image', name: 'image', widget: 'image' },
+                                                            { label: 'Layout', name: 'layout', widget: 'select', options: ['text-first', 'image-first'] }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Popular Destinations Section',
+                                                name: 'popularDestinations',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    { label: 'Map Image', name: 'mapImage', widget: 'image' },
+                                                    {
+                                                        label: 'Destinations',
+                                                        name: 'destinations',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' },
+                                                            { label: 'Image', name: 'image', widget: 'image' },
+                                                            { label: 'Flag Emoji', name: 'flag', widget: 'string' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Promotions Section',
+                                                name: 'promotions',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Voucher',
+                                                        name: 'voucher',
+                                                        widget: 'object',
+                                                        fields: [
+                                                            { label: 'Badge Text', name: 'badge', widget: 'string' },
+                                                            { label: 'Promo Title', name: 'promoTitle', widget: 'string' },
+                                                            { label: 'Discount Value', name: 'discountValue', widget: 'string' },
+                                                            { label: 'Discount Label', name: 'discountLabel', widget: 'string' },
+                                                            { label: 'Discount Note', name: 'discountNote', widget: 'string' },
+                                                            { label: 'Button Text', name: 'buttonText', widget: 'string' },
+                                                            { label: 'Button URL', name: 'buttonUrl', widget: 'string' },
+                                                            { label: 'Background Image', name: 'backgroundImage', widget: 'image' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Explore Trips Section',
+                                                name: 'exploreTrips',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' }
+                                                ]
+                                            },
+                                            {
+                                                label: 'How To Book Section',
+                                                name: 'howToBook',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Subtitle', name: 'subtitle', widget: 'text' },
+                                                    {
+                                                        label: 'Steps',
+                                                        name: 'steps',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Step Number', name: 'number', widget: 'string' },
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        label: 'Contact Page',
+                                        name: 'contact',
+                                        file: 'content/settings/contact.json',
+                                        fields: [
+                                            {
+                                                label: 'Hero Section',
+                                                name: 'hero',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Description', name: 'description', widget: 'text' },
+                                                    {
+                                                        label: 'Contact Info',
+                                                        name: 'contactInfo',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Label', name: 'label', widget: 'string' },
+                                                            { label: 'Value', name: 'value', widget: 'string' },
+                                                            { label: 'Type', name: 'type', widget: 'select', options: ['email', 'phone', 'address'] }
+                                                        ]
+                                                    },
+                                                    {
+                                                        label: 'Social Links',
+                                                        name: 'socialLinks',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Platform', name: 'platform', widget: 'string' },
+                                                            { label: 'URL', name: 'url', widget: 'string' },
+                                                            { label: 'Abbreviation', name: 'abbr', widget: 'string' }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Form Section',
+                                                name: 'form',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    {
+                                                        label: 'Fields',
+                                                        name: 'fields',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Label', name: 'label', widget: 'string' },
+                                                            { label: 'Placeholder', name: 'placeholder', widget: 'string' },
+                                                            { label: 'Type', name: 'type', widget: 'select', options: ['text', 'email', 'tel', 'select', 'textarea', 'date'] },
+                                                            { label: 'Required', name: 'required', widget: 'boolean', default: true },
+                                                            {
+                                                                label: 'Options',
+                                                                name: 'options',
+                                                                widget: 'list',
+                                                                required: false,
+                                                                field: { label: 'Option', name: 'option', widget: 'string' }
+                                                            }
+                                                        ]
+                                                    },
+                                                    { label: 'Submit Button Text', name: 'submitText', widget: 'string' }
+                                                ]
+                                            },
+                                            {
+                                                label: 'FAQ Section',
+                                                name: 'faq',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    {
+                                                        label: 'Questions',
+                                                        name: 'questions',
+                                                        widget: 'list',
+                                                        fields: [
+                                                            { label: 'Question', name: 'question', widget: 'string' },
+                                                            { label: 'Answer', name: 'answer', widget: 'text' }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        label: 'Trip Details Page',
+                                        name: 'tripDetails',
+                                        file: 'content/settings/trip-details.json',
+                                        fields: [
+                                            {
+                                                label: 'Page Settings',
+                                                name: 'settings',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Book Button Text', name: 'bookButtonText', widget: 'string', default: 'Book This Trip' },
+                                                    { label: 'Includes Section Title', name: 'includesTitle', widget: 'string', default: "What's Included" },
+                                                    { label: 'Itinerary Section Title', name: 'itineraryTitle', widget: 'string', default: 'Day-by-Day Itinerary' },
+                                                    { label: 'Gallery Section Title', name: 'galleryTitle', widget: 'string', default: 'Trip Gallery' }
+                                                ]
+                                            },
+                                            {
+                                                label: 'Info Labels',
+                                                name: 'labels',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Duration Label', name: 'duration', widget: 'string', default: 'Duration' },
+                                                    { label: 'Group Size Label', name: 'groupSize', widget: 'string', default: 'Group Size' },
+                                                    { label: 'Tour Type Label', name: 'tourType', widget: 'string', default: 'Tour Type' },
+                                                    { label: 'Accommodation Label', name: 'accommodation', widget: 'string', default: 'Accommodation' },
+                                                    { label: 'Price Label', name: 'price', widget: 'string', default: 'Starting From' }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        label: 'SEO Settings',
+                                        name: 'seo',
+                                        file: 'content/settings/seo.json',
+                                        fields: [
+                                            { label: 'Default Meta Title', name: 'defaultTitle', widget: 'string' },
+                                            { label: 'Title Separator', name: 'titleSeparator', widget: 'string', default: ' | ' },
+                                            { label: 'Site Name', name: 'siteName', widget: 'string' },
+                                            { label: 'Default Meta Description', name: 'defaultDescription', widget: 'text' },
+                                            { label: 'Default OG Image', name: 'ogImage', widget: 'image' },
+                                            { label: 'Twitter Handle', name: 'twitterHandle', widget: 'string', required: false },
+                                            {
+                                                label: 'Page SEO',
+                                                name: 'pages',
+                                                widget: 'object',
+                                                fields: [
+                                                    {
+                                                        label: 'Home',
+                                                        name: 'home',
+                                                        widget: 'object',
+                                                        fields: [
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' }
+                                                        ]
+                                                    },
+                                                    {
+                                                        label: 'About',
+                                                        name: 'about',
+                                                        widget: 'object',
+                                                        fields: [
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' }
+                                                        ]
+                                                    },
+                                                    {
+                                                        label: 'Trips',
+                                                        name: 'trips',
+                                                        widget: 'object',
+                                                        fields: [
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' }
+                                                        ]
+                                                    },
+                                                    {
+                                                        label: 'Contact',
+                                                        name: 'contact',
+                                                        widget: 'object',
+                                                        fields: [
+                                                            { label: 'Title', name: 'title', widget: 'string' },
+                                                            { label: 'Description', name: 'description', widget: 'text' }
+                                                        ]
+                                                    }
                                                 ]
                                             }
                                         ]
