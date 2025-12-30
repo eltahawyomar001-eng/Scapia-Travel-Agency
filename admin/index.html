@@ -13,6 +13,116 @@
 
 <body>
     <script src="https://unpkg.com/decap-cms@3.1.3/dist/decap-cms.js"></script>
+    <script>
+        window.CMS.init({
+            config: {
+                backend: {
+                    name: 'github',
+                    repo: 'eltahawyomar001-eng/Scapia-Travel-Agency',
+                    branch: 'main',
+                    base_url: 'https://scapia-travel-agency.vercel.app',
+                    auth_endpoint: '/api/auth'
+                },
+                media_folder: 'images/uploads',
+                public_folder: '/images/uploads',
+                site_url: 'https://scapia-travel-agency.vercel.app',
+                collections: [
+                    {
+                        name: 'trips',
+                        label: 'Trips',
+                        folder: 'content/trips',
+                        create: true,
+                        slug: '{{slug}}',
+                        fields: [
+                            { label: 'Title', name: 'title', widget: 'string' },
+                            { label: 'Destination', name: 'destination', widget: 'string' },
+                            { label: 'Short Description', name: 'excerpt', widget: 'text' },
+                            { label: 'Full Description', name: 'description', widget: 'markdown' },
+                            { label: 'Featured Image', name: 'image', widget: 'image' },
+                            { label: 'Price', name: 'price', widget: 'number', value_type: 'int', min: 0 },
+                            { label: 'Duration', name: 'duration', widget: 'string' },
+                            { label: 'Dates', name: 'dates', widget: 'string' },
+                            { label: 'Group Size', name: 'groupSize', widget: 'string' },
+                            {
+                                label: 'Category',
+                                name: 'category',
+                                widget: 'select',
+                                options: [
+                                    { label: 'Family Holidays', value: 'family' },
+                                    { label: 'Adventure Travel', value: 'adventure' },
+                                    { label: 'Beach Getaways', value: 'beach' },
+                                    { label: 'Nature Escapes', value: 'nature' },
+                                    { label: 'Cultural Tours', value: 'cultural' },
+                                    { label: 'Romantic Getaways', value: 'romantic' },
+                                    { label: 'Island Retreats', value: 'island' }
+                                ]
+                            },
+                            { label: 'Tour Type', name: 'tourType', widget: 'string' },
+                            { label: 'Accommodation', name: 'accommodation', widget: 'string' },
+                            {
+                                label: "What's Included",
+                                name: 'included',
+                                widget: 'list',
+                                field: { label: 'Item', name: 'item', widget: 'string' }
+                            },
+                            {
+                                label: 'Itinerary',
+                                name: 'itinerary',
+                                widget: 'list',
+                                fields: [
+                                    { label: 'Day', name: 'day', widget: 'number' },
+                                    { label: 'Title', name: 'title', widget: 'string' },
+                                    { label: 'Description', name: 'description', widget: 'text' }
+                                ]
+                            },
+                            { label: 'Is Featured', name: 'featured', widget: 'boolean', default: false },
+                            { label: 'Is Best Seller', name: 'bestSeller', widget: 'boolean', default: false }
+                        ]
+                    },
+                    {
+                        name: 'settings',
+                        label: 'Site Settings',
+                        files: [
+                            {
+                                label: 'Global Settings',
+                                name: 'global',
+                                file: 'content/settings/global.json',
+                                fields: [
+                                    { label: 'Site Name', name: 'siteName', widget: 'string', default: 'SCAPIA' },
+                                    {
+                                        label: 'Navigation',
+                                        name: 'navigation',
+                                        widget: 'object',
+                                        fields: [
+                                            { label: 'Logo Text', name: 'logo', widget: 'string', default: 'SCAPIA' }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                label: 'Homepage',
+                                name: 'homepage',
+                                file: 'content/settings/homepage.json',
+                                fields: [
+                                    {
+                                        label: 'Hero Section',
+                                        name: 'hero',
+                                        widget: 'object',
+                                        fields: [
+                                            { label: 'Title', name: 'title', widget: 'string' },
+                                            { label: 'Description', name: 'description', widget: 'text' },
+                                            { label: 'Button Text', name: 'buttonText', widget: 'string' },
+                                            { label: 'Background Image', name: 'backgroundImage', widget: 'image' }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        });
+    </script>
 </body>
 
 </html>
