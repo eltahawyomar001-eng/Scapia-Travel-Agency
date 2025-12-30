@@ -80,18 +80,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, observerOptions);
 
-    // Observe sections for animation
-    document.querySelectorAll('section').forEach(function (section) {
+    // Observe sections for animation (skip hero - it should be visible immediately)
+    document.querySelectorAll('section:not(.hero)').forEach(function (section) {
         section.style.opacity = '0';
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(section);
     });
-
-    // Fix initial hero visibility
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.opacity = '1';
-        hero.style.transform = 'translateY(0)';
-    }
 });
