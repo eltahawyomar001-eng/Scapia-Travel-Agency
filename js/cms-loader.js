@@ -1,6 +1,40 @@
 // CMS Content Loader - Loads content from DecapCMS JSON files
 // This script dynamically loads content from /content/settings/ JSON files
 
+/**
+ * Validates if an image URL is safe to use
+ * Only allows: full URLs (http/https) or CMS uploaded images (/images/uploads/)
+ * Rejects: broken local paths like /images/hero-bg.jpg that don't exist
+ */
+function isValidImageUrl(url) {
+  if (!url || typeof url !== 'string') return false;
+  // Allow full URLs (Unsplash, etc.)
+  if (url.startsWith('http://') || url.startsWith('https://')) return true;
+  // Allow CMS uploaded images
+  if (url.startsWith('/images/uploads/')) return true;
+  // Reject all other local paths (they likely don't exist)
+  return false;
+}
+
+/**
+ * Safely set background image only if URL is valid
+ */
+function safeSetBackgroundImage(element, imageUrl) {
+  if (element && isValidImageUrl(imageUrl)) {
+    element.style.backgroundImage = `url('${imageUrl}')`;
+  }
+}
+
+/**
+ * Safely set image src only if URL is valid
+ */
+function safeSetImageSrc(element, imageUrl, altText = '') {
+  if (element && isValidImageUrl(imageUrl)) {
+    element.src = imageUrl;
+    if (altText) element.alt = altText;
+  }
+}
+
 async function loadHomepageContent() {
   try {
     // Fetch homepage content from CMS
@@ -20,9 +54,7 @@ async function loadHomepageContent() {
         heroBtn.textContent = data.hero.buttonText;
         heroBtn.href = data.hero.buttonUrl;
       }
-      if (heroContainer && data.hero.backgroundImage) {
-        heroContainer.style.backgroundImage = `url('${data.hero.backgroundImage}')`;
-      }
+      safeSetBackgroundImage(heroContainer, data.hero.backgroundImage);
     }
     
     // Update Services Section
