@@ -56,11 +56,12 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="hero__container"
-          style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400');">
-          <h1 class="hero__title">Let's Explore destinations you've only imagined.</h1>
+          style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400');"
+          data-content="hero-background">
+          <h1 class="hero__title" data-content="hero-title">Let's Explore destinations you've only imagined.</h1>
           <div class="hero__content">
-            <p class="hero__desc">Explore new horizons, experience new cultures, and create lasting memories.</p>
-            <a href="trip-details.html" class="btn btn--primary">Book Your Trip</a>
+            <p class="hero__desc" data-content="hero-description">Explore new horizons, experience new cultures, and create lasting memories.</p>
+            <a href="trip-details.html" class="btn btn--primary" data-content="hero-button">Book Your Trip</a>
           </div>
         </div>
       </section>
@@ -68,8 +69,8 @@
       <!-- Services Section -->
       <section class="services">
         <div class="services__header">
-          <h2 class="services__title">Step Into Your Gateway to Smooth, Stress-Free, and Seamless Travel</h2>
-          <p class="services__subtitle">Experience a world of convenience and adventure with our trusted services.</p>
+          <h2 class="services__title" data-content="services-title">Step Into Your Gateway to Smooth, Stress-Free, and Seamless Travel</h2>
+          <p class="services__subtitle" data-content="services-subtitle">Experience a world of convenience and adventure with our trusted services.</p>
         </div>
 
         <div class="services__grid">
@@ -137,8 +138,8 @@
       <!-- Featured Trip Section -->
       <section class="featured">
         <div class="featured__info">
-          <h2 class="featured__title">Discover Our Handpicked Destinations</h2>
-          <p class="featured__desc">Experience a world of convenience and adventure with our trusted services.</p>
+          <h2 class="featured__title" data-content="featured-title">Discover Our Handpicked Destinations</h2>
+          <p class="featured__desc" data-content="featured-subtitle">Experience a world of convenience and adventure with our trusted services.</p>
         </div>
 
         <div class="featured__gallery">
@@ -555,7 +556,7 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script src="js/content-loader.js"></script>
+  <script src="js/cms-loader.js"></script>
 </body>
 
 </html>
