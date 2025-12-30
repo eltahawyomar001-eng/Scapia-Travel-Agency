@@ -1,111 +1,122 @@
 /* ==========================================================================
-   About Page Styles - EXACT FIGMA LAYOUT MATCH
+   About Page Styles - PIXEL-PERFECT FIGMA MATCH
    ========================================================================== */
 
-/* ==========================================================================
-   HERO SECTION - Title left, Description right, 3 images row below
-   ========================================================================== */
+/* HERO SECTION */
 .about-hero {
     padding: 50px;
     background-color: #FFFFFF;
-    max-width: 1440px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .about-hero__top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 80px;
-    margin-bottom: 50px;
+    gap: 50px;
+    width: 100%;
 }
 
 .about-hero__title {
+    font-family: "Geist", sans-serif;
     font-size: 84px;
     line-height: 90px;
     font-weight: 500;
     letter-spacing: -3px;
     color: #222222;
     flex-shrink: 0;
+    text-transform: capitalize;
 }
 
 .about-hero__desc {
-    font-size: 18px;
-    line-height: 28px;
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
     font-weight: 400;
     color: #7C7C7C;
-    max-width: 400px;
-    padding-top: 20px;
+    width: 645px;
+    flex-shrink: 0;
 }
 
 .about-hero__images {
     display: flex;
     gap: 24px;
+    width: 100%;
 }
 
 .about-hero__img {
     flex: 1;
-    height: 300px;
+    height: 600px;
     object-fit: cover;
     border-radius: 16px;
 }
 
-/* ==========================================================================
-   COLLECTIVE SECTION - Title left, text right, stats row, logos row
-   ========================================================================== */
+/* COLLECTIVE SECTION */
 .collective {
     padding: 100px 50px;
     background-color: #FFFFFF;
-    max-width: 1440px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .collective__content {
     display: flex;
     justify-content: space-between;
-    gap: 80px;
-    margin-bottom: 80px;
+    gap: 50px;
+    width: 100%;
 }
 
 .collective__title {
+    font-family: "Geist", sans-serif;
     font-size: 48px;
-    line-height: 58px;
+    line-height: 62px;
     font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
-    max-width: 500px;
+    width: 645px;
+    flex-shrink: 0;
+    text-transform: capitalize;
 }
 
 .collective__text {
-    font-size: 18px;
-    line-height: 28px;
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
     font-weight: 400;
     color: #7C7C7C;
-    max-width: 500px;
+    width: 645px;
+    flex-shrink: 0;
 }
 
 .collective__stats {
     display: flex;
-    gap: 100px;
-    margin-bottom: 80px;
+    gap: 50px;
+    width: 100%;
 }
 
 .collective__stat {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
 }
 
 .collective__stat-number {
-    font-size: 64px;
-    line-height: 72px;
+    font-family: "Geist", sans-serif;
+    font-size: 56px;
+    line-height: 64px;
     font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
-    margin-bottom: 8px;
 }
 
 .collective__stat-label {
-    font-size: 16px;
-    line-height: 26px;
+    font-family: "Geist", sans-serif;
+    font-size: 20px;
+    line-height: 34px;
     font-weight: 400;
     color: #7C7C7C;
 }
@@ -114,49 +125,52 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0;
+    padding: 32px 0;
     border-top: 1px solid #E3E8EF;
+    width: 100%;
 }
 
 .collective__logo {
+    font-family: "Geist", sans-serif;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
     color: #BDBDBD;
 }
 
-/* ==========================================================================
-   STORY TIMELINE - Left: title + images stacked, Right: timeline items
-   ========================================================================== */
+/* STORY TIMELINE SECTION */
 .story-timeline {
     display: flex;
-    gap: 80px;
-    padding: 100px 50px;
+    gap: 50px;
+    padding: 50px 50px 100px 50px;
     background-color: #FFFFFF;
-    max-width: 1440px;
-    margin: 0 auto;
 }
 
 .story-timeline__left {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 645px;
+    flex-shrink: 0;
 }
 
 .story-timeline__title {
+    font-family: "Geist", sans-serif;
     font-size: 48px;
-    line-height: 58px;
+    line-height: 62px;
     font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
-    margin-bottom: 50px;
+    text-transform: capitalize;
 }
 
 .story-timeline__images {
     display: flex;
-    gap: 24px;
+    gap: 16px;
 }
 
 .story-timeline__img {
     flex: 1;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 16px;
 }
@@ -165,193 +179,287 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 32px;
 }
 
 .story-timeline__item {
     display: flex;
-    gap: 40px;
-    padding: 32px 0;
+    gap: 24px;
+    padding-bottom: 32px;
     border-bottom: 1px solid #E3E8EF;
-}
-
-.story-timeline__item:first-child {
-    padding-top: 0;
 }
 
 .story-timeline__item:last-child {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .story-timeline__year {
+    font-family: "Geist", sans-serif;
     font-size: 24px;
-    line-height: 32px;
+    line-height: 30px;
     font-weight: 600;
     color: #222222;
     min-width: 60px;
+    flex-shrink: 0;
 }
 
 .story-timeline__desc {
-    font-size: 16px;
-    line-height: 26px;
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
     font-weight: 400;
     color: #7C7C7C;
 }
 
-/* ==========================================================================
-   WHY CHOOSE SECTION - Centered title, 2x3 grid with bordered cards
-   ========================================================================== */
+/* WHY CHOOSE SECTION */
 .why-choose {
     padding: 100px 50px;
     background-color: #FAFAFA;
-    max-width: 1440px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.why-choose__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
 }
 
 .why-choose__title {
+    font-family: "Geist", sans-serif;
     font-size: 48px;
-    line-height: 58px;
+    line-height: 62px;
     font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
     text-align: center;
-    margin-bottom: 16px;
+    text-transform: capitalize;
 }
 
 .why-choose__subtitle {
-    font-size: 18px;
-    line-height: 28px;
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
     font-weight: 400;
     color: #7C7C7C;
     text-align: center;
-    max-width: 600px;
-    margin: 0 auto 64px;
+    max-width: 800px;
 }
 
 .why-choose__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.why-choose__row {
+    display: flex;
+    gap: 32px;
+    width: 100%;
 }
 
 .why-choose__card {
+    flex: 1;
     background: #FFFFFF;
-    padding: 32px;
-    border: 1px solid #E3E8EF;
+    padding: 24px;
     border-radius: 16px;
     display: flex;
-    gap: 16px;
+    gap: 24px;
     align-items: flex-start;
 }
 
 .why-choose__icon {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-choose__icon svg {
+    width: 40px;
+    height: 40px;
 }
 
 .why-choose__card-title {
-    font-size: 16px;
-    line-height: 26px;
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
     font-weight: 500;
     color: #222222;
 }
 
-/* ==========================================================================
-   TEAM SECTION - Header: title left + subtitle right, 4 col grid
-   ========================================================================== */
+/* TEAM SECTION */
 .team {
-    padding: 100px 50px;
+    padding: 100px 50px 50px 50px;
     background-color: #FFFFFF;
-    max-width: 1440px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .team__header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 80px;
-    margin-bottom: 64px;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 50px;
+    width: 100%;
 }
 
 .team__title {
+    font-family: "Geist", sans-serif;
     font-size: 48px;
-    line-height: 58px;
+    line-height: 62px;
     font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
+    width: 645px;
+    flex-shrink: 0;
+    text-transform: capitalize;
 }
 
 .team__subtitle {
-    font-size: 18px;
-    line-height: 28px;
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
     font-weight: 400;
     color: #7C7C7C;
-    max-width: 400px;
-    padding-top: 10px;
+    width: 645px;
+    flex-shrink: 0;
 }
 
 .team__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
+    display: flex;
+    gap: 24px;
+    width: 100%;
 }
 
 .team-card {
-    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
 }
 
 .team-card__image {
     width: 100%;
-    aspect-ratio: 1;
+    height: 350px;
     object-fit: cover;
     border-radius: 16px;
-    margin-bottom: 24px;
+}
+
+.team-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+}
+
+.team-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    width: 100%;
 }
 
 .team-card__name {
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 600;
-    color: #222222;
-    margin-bottom: 4px;
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #0E1109;
+    text-transform: capitalize;
 }
 
 .team-card__role {
-    font-size: 14px;
-    line-height: 22px;
+    font-family: "Geist", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
     font-weight: 400;
-    color: #7C7C7C;
-    margin-bottom: 16px;
+    color: #677489;
 }
 
 .team-card__social {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .team-card__social-link {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FAFAFA;
-    border-radius: 50%;
+    border: 1px solid #222222;
+    border-radius: 99px;
     transition: background-color 0.3s ease;
 }
 
 .team-card__social-link:hover {
-    background-color: #E3E8EF;
+    background-color: #F5F5F5;
 }
 
-/* ==========================================================================
-   RESPONSIVE - TABLET
-   ========================================================================== */
+.team-card__social-link span {
+    font-family: "Manrope", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #222222;
+    line-height: 24px;
+}
+
+/* CTA SECTION */
+.cta {
+    padding: 100px 50px;
+    background-color: #222222;
+    text-align: center;
+}
+
+.cta__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.cta__title {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #FFFFFF;
+}
+
+.cta__desc {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+}
+
+.cta__btn {
+    margin-top: 16px;
+}
+
+/* RESPONSIVE - TABLET */
 @media (max-width: 1023px) {
     .about-hero {
         padding: 50px 24px;
+        gap: 40px;
     }
 
     .about-hero__top {
@@ -362,23 +470,27 @@
     .about-hero__title {
         font-size: 56px;
         line-height: 64px;
+        letter-spacing: -2px;
     }
 
     .about-hero__desc {
-        max-width: 100%;
-        padding-top: 0;
+        width: 100%;
+        font-size: 20px;
+        line-height: 32px;
     }
 
     .about-hero__images {
         flex-direction: column;
+        gap: 16px;
     }
 
     .about-hero__img {
-        height: 250px;
+        height: 300px;
     }
 
     .collective {
         padding: 50px 24px;
+        gap: 40px;
     }
 
     .collective__content {
@@ -388,12 +500,36 @@
 
     .collective__title,
     .collective__text {
-        max-width: 100%;
+        width: 100%;
+    }
+
+    .collective__title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .collective__text {
+        font-size: 20px;
+        line-height: 32px;
     }
 
     .collective__stats {
         flex-wrap: wrap;
-        gap: 40px;
+        gap: 32px;
+    }
+
+    .collective__stat {
+        min-width: 150px;
+    }
+
+    .collective__stat-number {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .collective__stat-label {
+        font-size: 18px;
+        line-height: 28px;
     }
 
     .collective__logos {
@@ -405,64 +541,149 @@
     .story-timeline {
         flex-direction: column;
         padding: 50px 24px;
-        gap: 50px;
+        gap: 40px;
+    }
+
+    .story-timeline__left {
+        width: 100%;
+        gap: 32px;
     }
 
     .story-timeline__title {
         font-size: 36px;
-        line-height: 44px;
+        line-height: 48px;
+    }
+
+    .story-timeline__img {
+        height: 250px;
+    }
+
+    .story-timeline__right {
+        gap: 24px;
+    }
+
+    .story-timeline__item {
+        padding-bottom: 24px;
+    }
+
+    .story-timeline__year {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .story-timeline__desc {
+        font-size: 18px;
+        line-height: 28px;
     }
 
     .why-choose {
         padding: 50px 24px;
+        gap: 40px;
     }
 
     .why-choose__title {
         font-size: 36px;
-        line-height: 44px;
+        line-height: 48px;
     }
 
-    .why-choose__grid {
-        grid-template-columns: 1fr;
+    .why-choose__subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .why-choose__row {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .why-choose__card {
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .why-choose__icon,
+    .why-choose__icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .why-choose__card-title {
+        font-size: 18px;
+        line-height: 28px;
     }
 
     .team {
         padding: 50px 24px;
+        gap: 40px;
     }
 
     .team__header {
         flex-direction: column;
+        align-items: flex-start;
         gap: 16px;
+    }
+
+    .team__title,
+    .team__subtitle {
+        width: 100%;
     }
 
     .team__title {
         font-size: 36px;
-        line-height: 44px;
+        line-height: 48px;
     }
 
     .team__subtitle {
-        max-width: 100%;
-        padding-top: 0;
+        font-size: 18px;
+        line-height: 28px;
     }
 
     .team__grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
     }
+
+    .team-card__image {
+        height: 280px;
+    }
+
+    .team-card__name {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .team-card__role {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .cta {
+        padding: 50px 24px;
+    }
+
+    .cta__title {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .cta__desc {
+        font-size: 18px;
+        line-height: 28px;
+    }
 }
 
-/* ==========================================================================
-   RESPONSIVE - MOBILE
-   ========================================================================== */
+/* RESPONSIVE - MOBILE */
 @media (max-width: 767px) {
     .about-hero {
         padding: 32px 16px;
+        gap: 32px;
     }
 
     .about-hero__title {
         font-size: 40px;
         line-height: 48px;
-        letter-spacing: -2px;
+        letter-spacing: -1.5px;
     }
 
     .about-hero__desc {
@@ -475,26 +696,49 @@
     }
 
     .collective {
-        padding: 50px 16px;
+        padding: 40px 16px;
+        gap: 32px;
     }
 
     .collective__title {
-        font-size: 32px;
-        line-height: 40px;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -1px;
+    }
+
+    .collective__text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .collective__stats {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .collective__stat {
+        min-width: 100%;
     }
 
     .collective__stat-number {
-        font-size: 48px;
-        line-height: 56px;
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .collective__stat-label {
+        font-size: 16px;
+        line-height: 24px;
     }
 
     .story-timeline {
-        padding: 50px 16px;
+        padding: 40px 16px;
+        gap: 32px;
     }
 
     .story-timeline__title {
         font-size: 28px;
         line-height: 36px;
+        letter-spacing: -1px;
     }
 
     .story-timeline__images {
@@ -502,16 +746,34 @@
     }
 
     .story-timeline__img {
-        height: 200px;
+        height: 180px;
+    }
+
+    .story-timeline__item {
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 20px;
+    }
+
+    .story-timeline__year {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .story-timeline__desc {
+        font-size: 16px;
+        line-height: 26px;
     }
 
     .why-choose {
-        padding: 50px 16px;
+        padding: 40px 16px;
+        gap: 32px;
     }
 
     .why-choose__title {
         font-size: 28px;
         line-height: 36px;
+        letter-spacing: -1px;
     }
 
     .why-choose__subtitle {
@@ -519,21 +781,82 @@
         line-height: 26px;
     }
 
+    .why-choose__grid {
+        gap: 24px;
+    }
+
+    .why-choose__row {
+        gap: 16px;
+    }
+
     .why-choose__card {
-        padding: 24px;
+        padding: 16px;
+        gap: 12px;
+    }
+
+    .why-choose__icon,
+    .why-choose__icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .why-choose__card-title {
+        font-size: 16px;
+        line-height: 24px;
     }
 
     .team {
-        padding: 50px 16px;
+        padding: 40px 16px;
+        gap: 32px;
     }
 
     .team__title {
         font-size: 28px;
         line-height: 36px;
+        letter-spacing: -1px;
+    }
+
+    .team__subtitle {
+        font-size: 16px;
+        line-height: 26px;
     }
 
     .team__grid {
         grid-template-columns: 1fr;
         gap: 32px;
+    }
+
+    .team-card__image {
+        height: 300px;
+    }
+
+    .team-card__name {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .team-card__role {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .team-card__social-link {
+        width: 36px;
+        height: 36px;
+    }
+
+    .cta {
+        padding: 40px 16px;
+    }
+
+    .cta__title {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -1px;
+    }
+
+    .cta__desc {
+        font-size: 16px;
+        line-height: 26px;
     }
 }
