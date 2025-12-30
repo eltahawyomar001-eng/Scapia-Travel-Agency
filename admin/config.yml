@@ -5,6 +5,8 @@ backend:
   name: github
   repo: eltahawyomar001-eng/Scapia-Travel-Agency
   branch: main
+  base_url: https://scapia-travel-agency.vercel.app
+  auth_endpoint: /api/auth
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
