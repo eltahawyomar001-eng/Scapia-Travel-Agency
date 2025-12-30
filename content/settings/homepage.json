@@ -1,14 +1,23 @@
 {
   "hero": {
-    "title": "Let's Explore destinations you've only imagined.",
+    "title": "Let's Explore destinations you've onl imagined.",
     "description": "Explore new horizons, experience new cultures, and create lasting memories.",
     "buttonText": "Explore Trips",
     "buttonUrl": "/trips.html",
     "backgroundImage": "/images/hero-bg.jpg",
     "stats": [
-      { "number": "500+", "label": "Destinations" },
-      { "number": "50K+", "label": "Happy Travelers" },
-      { "number": "15+", "label": "Years Experience" }
+      {
+        "number": "500+",
+        "label": "Destinations"
+      },
+      {
+        "number": "50K+",
+        "label": "Happy Travelers"
+      },
+      {
+        "number": "15+",
+        "label": "Years Experience"
+      }
     ]
   },
   "services": {
@@ -47,12 +56,36 @@
     "title": "Travel Gallery",
     "subtitle": "Glimpses of extraordinary journeys from around the world.",
     "images": [
-      { "image": "/images/gallery/gallery-1.jpg", "alt": "Beach sunset", "location": "Maldives" },
-      { "image": "/images/gallery/gallery-2.jpg", "alt": "Mountain view", "location": "Swiss Alps" },
-      { "image": "/images/gallery/gallery-3.jpg", "alt": "City lights", "location": "Tokyo, Japan" },
-      { "image": "/images/gallery/gallery-4.jpg", "alt": "Ancient temple", "location": "Bali, Indonesia" },
-      { "image": "/images/gallery/gallery-5.jpg", "alt": "Safari adventure", "location": "Kenya" },
-      { "image": "/images/gallery/gallery-6.jpg", "alt": "Northern lights", "location": "Iceland" }
+      {
+        "image": "/images/gallery/gallery-1.jpg",
+        "alt": "Beach sunset",
+        "location": "Maldives"
+      },
+      {
+        "image": "/images/gallery/gallery-2.jpg",
+        "alt": "Mountain view",
+        "location": "Swiss Alps"
+      },
+      {
+        "image": "/images/gallery/gallery-3.jpg",
+        "alt": "City lights",
+        "location": "Tokyo, Japan"
+      },
+      {
+        "image": "/images/gallery/gallery-4.jpg",
+        "alt": "Ancient temple",
+        "location": "Bali, Indonesia"
+      },
+      {
+        "image": "/images/gallery/gallery-5.jpg",
+        "alt": "Safari adventure",
+        "location": "Kenya"
+      },
+      {
+        "image": "/images/gallery/gallery-6.jpg",
+        "alt": "Northern lights",
+        "location": "Iceland"
+      }
     ]
   },
   "whyChoose": {
