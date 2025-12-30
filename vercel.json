@@ -1,0 +1,23 @@
+{
+  "headers": [
+    {
+      "source": "/admin/config.yml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/yaml"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/auth",
+      "destination": "/api/auth/index.js"
+    },
+    {
+      "source": "/api/auth/callback",
+      "destination": "/api/auth/callback.js"
+    }
+  ]
+}
