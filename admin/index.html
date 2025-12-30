@@ -9,82 +9,75 @@
     <style>
         body { margin: 0; }
     </style>
-    <!-- Use Netlify CMS (more stable) instead of Decap -->
-    <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
 </head>
 
 <body>
+    <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
     <script>
-        CMS.init({
-            config: {
-                backend: {
-                    name: 'github',
-                    repo: 'eltahawyomar001-eng/Scapia-Travel-Agency',
-                    branch: 'main',
-                    base_url: 'https://scapia-travel-agency.vercel.app',
-                    auth_endpoint: '/api/auth'
-                },
-                media_folder: 'images/uploads',
-                public_folder: '/images/uploads',
-                site_url: 'https://scapia-travel-agency.vercel.app',
-                collections: [
-                    {
-                        name: 'trips',
-                        label: 'Trips',
-                        folder: 'content/trips',
-                        create: true,
-                        slug: '{{slug}}',
-                        fields: [
-                            { label: 'Title', name: 'title', widget: 'string' },
-                            { label: 'Destination', name: 'destination', widget: 'string' },
-                            { label: 'Short Description', name: 'excerpt', widget: 'text' },
-                            { label: 'Full Description', name: 'description', widget: 'markdown' },
-                            { label: 'Featured Image', name: 'image', widget: 'image' },
-                            { label: 'Price', name: 'price', widget: 'number', value_type: 'int', min: 0 },
-                            { label: 'Duration', name: 'duration', widget: 'string' },
-                            { label: 'Dates', name: 'dates', widget: 'string' },
-                            { label: 'Group Size', name: 'groupSize', widget: 'string' },
+        window.addEventListener('load', function() {
+            if (typeof CMS !== 'undefined') {
+                CMS.init({
+                    config: {
+                        backend: {
+                            name: 'github',
+                            repo: 'eltahawyomar001-eng/Scapia-Travel-Agency',
+                            branch: 'main',
+                            base_url: 'https://scapia-travel-agency.vercel.app',
+                            auth_endpoint: '/api/auth'
+                        },
+                        media_folder: 'images/uploads',
+                        public_folder: '/images/uploads',
+                        site_url: 'https://scapia-travel-agency.vercel.app',
+                        collections: [
                             {
-                                label: 'Category',
-                                name: 'category',
-                                widget: 'select',
-                                options: [
-                                    { label: 'Family Holidays', value: 'family' },
-                                    { label: 'Adventure Travel', value: 'adventure' },
-                                    { label: 'Beach Getaways', value: 'beach' },
-                                    { label: 'Nature Escapes', value: 'nature' },
-                                    { label: 'Cultural Tours', value: 'cultural' }
+                                name: 'trips',
+                                label: 'Trips',
+                                folder: 'content/trips',
+                                create: true,
+                                slug: '{{slug}}',
+                                fields: [
+                                    { label: 'Title', name: 'title', widget: 'string' },
+                                    { label: 'Destination', name: 'destination', widget: 'string' },
+                                    { label: 'Short Description', name: 'excerpt', widget: 'text' },
+                                    { label: 'Full Description', name: 'description', widget: 'markdown' },
+                                    { label: 'Featured Image', name: 'image', widget: 'image' },
+                                    { label: 'Price', name: 'price', widget: 'number', value_type: 'int', min: 0 },
+                                    { label: 'Duration', name: 'duration', widget: 'string' },
+                                    { label: 'Group Size', name: 'groupSize', widget: 'string' },
+                                    {
+                                        label: 'Category',
+                                        name: 'category',
+                                        widget: 'select',
+                                        options: ['family', 'adventure', 'beach', 'nature', 'cultural']
+                                    },
+                                    { label: 'Is Featured', name: 'featured', widget: 'boolean', default: false }
                                 ]
                             },
-                            { label: 'Tour Type', name: 'tourType', widget: 'string' },
-                            { label: 'Accommodation', name: 'accommodation', widget: 'string' },
-                            { label: 'Is Featured', name: 'featured', widget: 'boolean', default: false }
-                        ]
-                    },
-                    {
-                        name: 'settings',
-                        label: 'Site Settings',
-                        files: [
                             {
-                                label: 'Homepage',
-                                name: 'homepage',
-                                file: 'content/settings/homepage.json',
-                                fields: [
+                                name: 'settings',
+                                label: 'Site Settings',
+                                files: [
                                     {
-                                        label: 'Hero Section',
-                                        name: 'hero',
-                                        widget: 'object',
+                                        label: 'Homepage',
+                                        name: 'homepage',
+                                        file: 'content/settings/homepage.json',
                                         fields: [
-                                            { label: 'Title', name: 'title', widget: 'string' },
-                                            { label: 'Description', name: 'description', widget: 'text' },
-                                            { label: 'Button Text', name: 'buttonText', widget: 'string' }
+                                            {
+                                                label: 'Hero Section',
+                                                name: 'hero',
+                                                widget: 'object',
+                                                fields: [
+                                                    { label: 'Title', name: 'title', widget: 'string' },
+                                                    { label: 'Description', name: 'description', widget: 'text' }
+                                                ]
+                                            }
                                         ]
                                     }
                                 ]
                             }
                         ]
                     }
-                ]
+                });
             }
         });
     </script>
