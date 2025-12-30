@@ -557,12 +557,9 @@
    ========================================================================== */
 .footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
     padding: 50px;
-    gap: 32px;
-    isolation: isolate;
+    gap: 0;
     background-color: var(--color-black-text);
     color: var(--color-white);
     position: relative;
@@ -629,8 +626,9 @@
 
 .footer__bottom {
     max-width: var(--container-max-width);
-    margin: var(--spacing-xl) auto 0;
-    padding-top: var(--spacing-md);
+    width: 100%;
+    margin: 50px auto 0;
+    padding-top: 32px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
@@ -638,13 +636,15 @@
 }
 
 .footer__copyright {
-    font-size: var(--font-size-small);
-    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .footer__social {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: 16px;
 }
 
 .footer__social-link {
