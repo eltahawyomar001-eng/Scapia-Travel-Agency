@@ -1,25 +1,23 @@
 /* ==========================================================================
-   About Page Styles - FIGMA EXACT MATCH
+   About Page Styles - EXACT FIGMA LAYOUT MATCH
    ========================================================================== */
 
 /* ==========================================================================
-   HERO - Your Journey, Our Passion
+   HERO SECTION - Title left, Description right, 3 images row below
    ========================================================================== */
 .about-hero {
-    padding: 100px 50px;
+    padding: 50px;
     background-color: #FFFFFF;
-}
-
-.about-hero__content {
-    display: flex;
-    gap: 80px;
-    max-width: 1340px;
+    max-width: 1440px;
     margin: 0 auto;
-    align-items: flex-start;
 }
 
-.about-hero__text {
-    flex: 1;
+.about-hero__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    margin-bottom: 50px;
 }
 
 .about-hero__title {
@@ -28,7 +26,7 @@
     font-weight: 500;
     letter-spacing: -3px;
     color: #222222;
-    margin-bottom: 24px;
+    flex-shrink: 0;
 }
 
 .about-hero__desc {
@@ -36,63 +34,46 @@
     line-height: 28px;
     font-weight: 400;
     color: #7C7C7C;
-    max-width: 500px;
+    max-width: 400px;
+    padding-top: 20px;
 }
 
 .about-hero__images {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 16px;
-    height: 500px;
+    display: flex;
+    gap: 24px;
 }
 
 .about-hero__img {
-    width: 100%;
-    height: 100%;
+    flex: 1;
+    height: 300px;
     object-fit: cover;
     border-radius: 16px;
 }
 
-.about-hero__img--1 {
-    grid-column: 1;
-    grid-row: 1 / 3;
-}
-
-.about-hero__img--2 {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.about-hero__img--3 {
-    grid-column: 2;
-    grid-row: 2;
-}
-
 /* ==========================================================================
-   COLLECTIVE SECTION
+   COLLECTIVE SECTION - Title left, text right, stats row, logos row
    ========================================================================== */
 .collective {
     padding: 100px 50px;
-    background-color: #FAFAFA;
+    background-color: #FFFFFF;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .collective__content {
-    max-width: 1340px;
-    margin: 0 auto 64px;
     display: flex;
+    justify-content: space-between;
     gap: 80px;
-    align-items: flex-start;
+    margin-bottom: 80px;
 }
 
 .collective__title {
     font-size: 48px;
-    line-height: 62px;
-    font-weight: 600;
+    line-height: 58px;
+    font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
-    flex: 1;
+    max-width: 500px;
 }
 
 .collective__text {
@@ -100,19 +81,17 @@
     line-height: 28px;
     font-weight: 400;
     color: #7C7C7C;
-    flex: 1;
+    max-width: 500px;
 }
 
 .collective__stats {
-    max-width: 1340px;
-    margin: 0 auto 80px;
     display: flex;
-    justify-content: space-between;
-    gap: 50px;
+    gap: 100px;
+    margin-bottom: 80px;
 }
 
 .collective__stat {
-    text-align: center;
+    text-align: left;
 }
 
 .collective__stat-number {
@@ -121,79 +100,82 @@
     font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .collective__stat-label {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 400;
     color: #7C7C7C;
 }
 
 .collective__logos {
-    max-width: 1340px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
     padding: 40px 0;
     border-top: 1px solid #E3E8EF;
-    border-bottom: 1px solid #E3E8EF;
 }
 
 .collective__logo {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
-    color: #7C7C7C;
+    color: #BDBDBD;
 }
 
 /* ==========================================================================
-   STORY TIMELINE SECTION
+   STORY TIMELINE - Left: title + images stacked, Right: timeline items
    ========================================================================== */
 .story-timeline {
+    display: flex;
+    gap: 80px;
     padding: 100px 50px;
     background-color: #FFFFFF;
-    max-width: 1340px;
+    max-width: 1440px;
     margin: 0 auto;
+}
+
+.story-timeline__left {
+    flex: 1;
 }
 
 .story-timeline__title {
     font-size: 48px;
-    line-height: 62px;
-    font-weight: 600;
+    line-height: 58px;
+    font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
-    margin-bottom: 64px;
-    max-width: 700px;
+    margin-bottom: 50px;
 }
 
 .story-timeline__images {
     display: flex;
     gap: 24px;
-    margin-bottom: 80px;
 }
 
 .story-timeline__img {
-    width: 50%;
-    height: 400px;
+    flex: 1;
+    height: 300px;
     object-fit: cover;
     border-radius: 16px;
 }
 
-.story-timeline__items {
+.story-timeline__right {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 50px;
 }
 
 .story-timeline__item {
     display: flex;
-    gap: 50px;
-    align-items: flex-start;
-    padding-bottom: 50px;
+    gap: 40px;
+    padding: 32px 0;
     border-bottom: 1px solid #E3E8EF;
+}
+
+.story-timeline__item:first-child {
+    padding-top: 0;
 }
 
 .story-timeline__item:last-child {
@@ -201,34 +183,34 @@
 }
 
 .story-timeline__year {
-    font-size: 48px;
-    line-height: 62px;
+    font-size: 24px;
+    line-height: 32px;
     font-weight: 600;
-    letter-spacing: -2px;
     color: #222222;
-    min-width: 150px;
+    min-width: 60px;
 }
 
 .story-timeline__desc {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 400;
     color: #7C7C7C;
-    flex: 1;
 }
 
 /* ==========================================================================
-   WHY CHOOSE SECTION
+   WHY CHOOSE SECTION - Centered title, 2x3 grid with bordered cards
    ========================================================================== */
 .why-choose {
     padding: 100px 50px;
     background-color: #FAFAFA;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .why-choose__title {
     font-size: 48px;
-    line-height: 62px;
-    font-weight: 600;
+    line-height: 58px;
+    font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
     text-align: center;
@@ -236,81 +218,80 @@
 }
 
 .why-choose__subtitle {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 400;
     color: #7C7C7C;
     text-align: center;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto 64px;
 }
 
 .why-choose__grid {
-    max-width: 1340px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 24px;
 }
 
 .why-choose__card {
     background: #FFFFFF;
-    padding: 40px;
+    padding: 32px;
+    border: 1px solid #E3E8EF;
     border-radius: 16px;
     display: flex;
-    gap: 24px;
+    gap: 16px;
     align-items: flex-start;
 }
 
 .why-choose__icon {
-    width: 48px;
-    height: 48px;
+    width: 24px;
+    height: 24px;
     flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #FAFAFA;
-    border-radius: 8px;
 }
 
 .why-choose__card-title {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 500;
     color: #222222;
 }
 
 /* ==========================================================================
-   TEAM SECTION
+   TEAM SECTION - Header: title left + subtitle right, 4 col grid
    ========================================================================== */
 .team {
     padding: 100px 50px;
     background-color: #FFFFFF;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.team__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    margin-bottom: 64px;
 }
 
 .team__title {
     font-size: 48px;
-    line-height: 62px;
-    font-weight: 600;
+    line-height: 58px;
+    font-weight: 500;
     letter-spacing: -2px;
     color: #222222;
-    text-align: center;
-    margin-bottom: 16px;
 }
 
 .team__subtitle {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 400;
     color: #7C7C7C;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 64px;
+    max-width: 400px;
+    padding-top: 10px;
 }
 
 .team__grid {
-    max-width: 1340px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
@@ -329,16 +310,16 @@
 }
 
 .team-card__name {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 28px;
     font-weight: 600;
     color: #222222;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .team-card__role {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 22px;
     font-weight: 400;
     color: #7C7C7C;
     margin-bottom: 16px;
@@ -351,8 +332,8 @@
 }
 
 .team-card__social-link {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -373,19 +354,27 @@
         padding: 50px 24px;
     }
 
-    .about-hero__content {
+    .about-hero__top {
         flex-direction: column;
-        gap: 50px;
+        gap: 24px;
     }
 
     .about-hero__title {
-        font-size: 64px;
-        line-height: 72px;
-        letter-spacing: -2px;
+        font-size: 56px;
+        line-height: 64px;
+    }
+
+    .about-hero__desc {
+        max-width: 100%;
+        padding-top: 0;
     }
 
     .about-hero__images {
-        height: 400px;
+        flex-direction: column;
+    }
+
+    .about-hero__img {
+        height: 250px;
     }
 
     .collective {
@@ -394,50 +383,34 @@
 
     .collective__content {
         flex-direction: column;
-        gap: 32px;
+        gap: 24px;
     }
 
-    .collective__title {
-        font-size: 36px;
-        line-height: 48px;
+    .collective__title,
+    .collective__text {
+        max-width: 100%;
     }
 
     .collective__stats {
-        flex-direction: column;
-        gap: 32px;
+        flex-wrap: wrap;
+        gap: 40px;
     }
 
     .collective__logos {
         flex-wrap: wrap;
-        gap: 32px;
+        gap: 24px;
+        justify-content: center;
     }
 
     .story-timeline {
+        flex-direction: column;
         padding: 50px 24px;
+        gap: 50px;
     }
 
     .story-timeline__title {
         font-size: 36px;
-        line-height: 48px;
-    }
-
-    .story-timeline__images {
-        flex-direction: column;
-    }
-
-    .story-timeline__img {
-        width: 100%;
-        height: 300px;
-    }
-
-    .story-timeline__item {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .story-timeline__year {
-        font-size: 36px;
-        line-height: 48px;
+        line-height: 44px;
     }
 
     .why-choose {
@@ -446,21 +419,30 @@
 
     .why-choose__title {
         font-size: 36px;
-        line-height: 48px;
+        line-height: 44px;
     }
 
     .why-choose__grid {
         grid-template-columns: 1fr;
-        gap: 24px;
     }
 
     .team {
         padding: 50px 24px;
     }
 
+    .team__header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
     .team__title {
         font-size: 36px;
-        line-height: 48px;
+        line-height: 44px;
+    }
+
+    .team__subtitle {
+        max-width: 100%;
+        padding-top: 0;
     }
 
     .team__grid {
@@ -474,12 +456,12 @@
    ========================================================================== */
 @media (max-width: 767px) {
     .about-hero {
-        padding: 50px 16px;
+        padding: 32px 16px;
     }
 
     .about-hero__title {
-        font-size: 48px;
-        line-height: 56px;
+        font-size: 40px;
+        line-height: 48px;
         letter-spacing: -2px;
     }
 
@@ -488,9 +470,8 @@
         line-height: 26px;
     }
 
-    .about-hero__images {
-        height: 300px;
-        gap: 12px;
+    .about-hero__img {
+        height: 200px;
     }
 
     .collective {
@@ -499,13 +480,7 @@
 
     .collective__title {
         font-size: 32px;
-        line-height: 42px;
-        letter-spacing: -1px;
-    }
-
-    .collective__text {
-        font-size: 16px;
-        line-height: 26px;
+        line-height: 40px;
     }
 
     .collective__stat-number {
@@ -513,39 +488,21 @@
         line-height: 56px;
     }
 
-    .collective__stat-label {
-        font-size: 14px;
-        line-height: 22px;
-    }
-
-    .collective__logos {
-        flex-direction: column;
-        gap: 24px;
-    }
-
     .story-timeline {
         padding: 50px 16px;
     }
 
     .story-timeline__title {
-        font-size: 32px;
-        line-height: 42px;
-        letter-spacing: -1px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .story-timeline__images {
+        flex-direction: column;
     }
 
     .story-timeline__img {
-        height: 250px;
-    }
-
-    .story-timeline__year {
-        font-size: 32px;
-        line-height: 42px;
-        letter-spacing: -1px;
-    }
-
-    .story-timeline__desc {
-        font-size: 16px;
-        line-height: 26px;
+        height: 200px;
     }
 
     .why-choose {
@@ -553,9 +510,8 @@
     }
 
     .why-choose__title {
-        font-size: 32px;
-        line-height: 42px;
-        letter-spacing: -1px;
+        font-size: 28px;
+        line-height: 36px;
     }
 
     .why-choose__subtitle {
@@ -565,13 +521,6 @@
 
     .why-choose__card {
         padding: 24px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .why-choose__card-title {
-        font-size: 16px;
-        line-height: 26px;
     }
 
     .team {
@@ -579,14 +528,8 @@
     }
 
     .team__title {
-        font-size: 32px;
-        line-height: 42px;
-        letter-spacing: -1px;
-    }
-
-    .team__subtitle {
-        font-size: 16px;
-        line-height: 26px;
+        font-size: 28px;
+        line-height: 36px;
     }
 
     .team__grid {
