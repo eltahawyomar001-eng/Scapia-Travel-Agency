@@ -30,7 +30,7 @@
       <div class="nav__menu" id="navMenu">
         <a href="index.html" class="nav__link nav__link--active">Home</a>
         <a href="about.html" class="nav__link">About Us</a>
-        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="trips.html" class="nav__link">Trip</a>
         <a href="contact.html" class="nav__link">Contact</a>
       </div>
 
@@ -153,16 +153,18 @@
             </div>
 
             <div class="featured__bottom">
+              <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400" alt="Bali Main"
+                class="featured__img-first">
               <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600" alt="Bali Temple"
                 class="featured__img-small">
-
-              <a href="trip-details.html" class="btn--link featured__action">
-                <span>View Details</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
             </div>
+
+            <a href="trip-details.html" class="btn--link featured__action">
+              <span>View Details</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -349,79 +351,206 @@
         </div>
       </section>
 
-      <!-- CTA Section -->
-      <section class="cta">
-        <div class="cta__container">
-          <h2 class="cta__title">Ready to Start Your Adventure?</h2>
-          <p class="cta__desc">Join thousands of happy travelers who have explored the world with SCAPIA.</p>
-          <a href="contact.html" class="btn btn--primary cta__btn">Get Started Today</a>
+      <!-- Upcoming Adventures Section -->
+      <section class="adventures">
+        <div class="adventures__info">
+          <div class="adventures__heading">
+            <h2 class="adventures__title">Upcoming Adventures</h2>
+            <p class="adventures__desc">Explore our curated selection of upcoming trips designed to inspire your next journey.</p>
+          </div>
+          <div class="adventures__nav">
+            <button class="adventures__nav-btn" aria-label="Previous">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <button class="adventures__nav-btn adventures__nav-btn--active" aria-label="Next">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="adventures__cards">
+          <article class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1528181304800-259b08848526?w=800');">
+            <span class="trip-card__badge">Thailand</span>
+            <div class="trip-card__detail">
+              <div class="trip-card__info">
+                <p class="trip-card__price">$1,299</p>
+                <p class="trip-card__duration">7 Days / 6 Nights</p>
+              </div>
+              <a href="trip-details.html" class="trip-card__action">
+                <span>View Trip</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800');">
+            <span class="trip-card__badge">Japan</span>
+            <div class="trip-card__detail">
+              <div class="trip-card__info">
+                <p class="trip-card__price">$2,499</p>
+                <p class="trip-card__duration">10 Days / 9 Nights</p>
+              </div>
+              <a href="trip-details.html" class="trip-card__action">
+                <span>View Trip</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </article>
         </div>
       </section>
+
+      <!-- Testimonial Section -->
+      <section class="testimonial">
+        <div class="testimonial__header">
+          <h2 class="testimonial__title">What Our Travelers Say</h2>
+          <p class="testimonial__subtitle">Real stories from real adventurers who explored the world with us.</p>
+        </div>
+
+        <div class="testimonial__container" style="background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400');">
+          <div class="testimonial__card">
+            <p class="testimonial__quote">"SCAPIA made our honeymoon absolutely magical. From the seamless booking process to the personalized recommendations, everything was perfect. We can't wait to plan our next adventure with them!"</p>
+            <div class="testimonial__divider"></div>
+            <div class="testimonial__profile">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200" alt="Sarah Johnson" class="testimonial__avatar">
+              <div class="testimonial__info">
+                <h4 class="testimonial__name">Sarah Johnson</h4>
+                <p class="testimonial__location">New York, USA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Preview Section -->
+      <section class="blog-preview">
+        <h2 class="blog-preview__title">Latest from Our Blog</h2>
+
+        <div class="blog-preview__grid">
+          <article class="blog-card blog-card--large">
+            <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?w=800" alt="Hidden Gems of Southeast Asia" class="blog-card__image">
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">Hidden Gems of Southeast Asia: Off-the-Beaten-Path Destinations</h3>
+              <p class="blog-card__date">December 15, 2024</p>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--small">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="Travel Light" class="blog-card__image">
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">How to Pack Light Without Sacrificing Essentials</h3>
+              <p class="blog-card__date">December 10, 2024</p>
+            </div>
+          </article>
+
+          <article class="blog-card blog-card--small">
+            <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=600" alt="Budget Travel" class="blog-card__image">
+            <div class="blog-card__content">
+              <h3 class="blog-card__title">Budget Travel Tips: See the World Without Breaking the Bank</h3>
+              <p class="blog-card__date">December 5, 2024</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer__container">
-        <div class="footer__brand">
-          <span class="footer__logo">SCAPIA</span>
-          <p class="footer__desc">Your gateway to extraordinary travel experiences around the world.</p>
-        </div>
+    <!-- CTA + Footer Combined Section -->
+    <div class="cta-footer" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400');">
+      <!-- CTA Section -->
+      <section class="cta">
+        <h2 class="cta__title"><em>Ready For Your Next Adventure?</em></h2>
+        <p class="cta__desc">Let's start planning your journey today!</p>
+        <a href="contact.html" class="btn btn--primary cta__btn">Explore Now</a>
+      </section>
 
-        <div class="footer__column">
-          <h4 class="footer__title">Quick Links</h4>
-          <div class="footer__links">
-            <a href="index.html" class="footer__link">Home</a>
-            <a href="about.html" class="footer__link">About Us</a>
-            <a href="blog.html" class="footer__link">Blog</a>
-            <a href="contact.html" class="footer__link">Contact</a>
+      <!-- Footer -->
+      <footer class="footer">
+        <!-- Background Watermark -->
+        <div class="footer__watermark">SCAPIA</div>
+        
+        <!-- Left Side - Brand Info -->
+        <div class="footer__left">
+          <div class="footer__brand">
+            <span class="footer__logo">SCAPIA</span>
+            <p class="footer__desc">Explore the world effortlessly with Scapia, your trusted travel partner. We bring unforgettable journeys to life with expert planning, personalized services, and a commitment to excellence.</p>
+          </div>
+          <div class="footer__contact">
+            <div class="footer__contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="3" stroke="#FFFFFF" stroke-width="2"/>
+              </svg>
+              <span>456 Explorer Lane, New York, NY 10001</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>+1 (234) 567-8900</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="22,6 12,13 2,6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>hello@scapiatravel.com</span>
+            </div>
           </div>
         </div>
 
-        <div class="footer__column">
-          <h4 class="footer__title">Destinations</h4>
-          <div class="footer__links">
-            <a href="trip-details.html" class="footer__link">Bali, Indonesia</a>
-            <a href="trip-details.html" class="footer__link">Paris, France</a>
-            <a href="trip-details.html" class="footer__link">Tokyo, Japan</a>
-            <a href="trip-details.html" class="footer__link">New York, USA</a>
+        <!-- Right Side - Links & Newsletter -->
+        <div class="footer__right">
+          <!-- Row container for Quick Links + Follow Us (side by side on mobile) -->
+          <div class="footer__links-row">
+            <div class="footer__column">
+              <h4 class="footer__title">Quick Links</h4>
+              <div class="footer__links">
+                <a href="index.html" class="footer__link">Home</a>
+                <a href="about.html" class="footer__link">Destinations</a>
+                <a href="trip-details.html" class="footer__link">Trips</a>
+                <a href="trips.html" class="footer__link">Services</a>
+                <a href="trips.html" class="footer__link">Trip</a>
+                <a href="contact.html" class="footer__link">Contact Us</a>
+              </div>
+            </div>
+
+            <div class="footer__column">
+              <h4 class="footer__title">Follow Us</h4>
+              <div class="footer__social">
+                <a href="#" class="footer__social-link" aria-label="Facebook">
+                  <span>FB</span>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                  <span>IN</span>
+                </a>
+                <a href="#" class="footer__social-link" aria-label="Instagram">
+                  <span>IG</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer__newsletter">
+            <p class="footer__newsletter-text">Get the latest travel deals, tips, and destination inspirations straight to your inbox.</p>
+            <form class="footer__newsletter-form">
+              <input type="email" placeholder="Enter your email" class="footer__newsletter-input">
+              <button type="submit" class="footer__newsletter-btn">Send</button>
+            </form>
+            <div class="footer__bottom">
+              <p class="footer__copyright">2030 Scapia Travel Agency. All rights reserved.</p>
+            </div>
           </div>
         </div>
-
-        <div class="footer__column">
-          <h4 class="footer__title">Support</h4>
-          <div class="footer__links">
-            <a href="#" class="footer__link">FAQs</a>
-            <a href="#" class="footer__link">Privacy Policy</a>
-            <a href="#" class="footer__link">Terms of Service</a>
-            <a href="contact.html" class="footer__link">Help Center</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <p class="footer__copyright">© 2024 SCAPIA. All rights reserved.</p>
-        <div class="footer__social">
-          <a href="#" class="footer__social-link" aria-label="Facebook">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-            </svg>
-          </a>
-          <a href="#" class="footer__social-link" aria-label="Instagram">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-            </svg>
-          </a>
-          <a href="#" class="footer__social-link" aria-label="Twitter">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-              <path
-                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </div>
 
   <!-- Mobile Menu Script -->

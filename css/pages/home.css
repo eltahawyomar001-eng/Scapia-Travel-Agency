@@ -1,9 +1,11 @@
-/* ===================================
-   Homepage Styles - Pixel Perfect to Figma
-   Container: 1340px, Page: 1440px
-   =================================== */
+/* ==========================================================================
+   Homepage Styles - Pixel-Perfect Figma Match
+   Desktop: 1440px, Container: 1340px
+   ========================================================================== */
 
-/* Hero Section */
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
 .hero {
     width: 100%;
     padding: 0 50px 40px;
@@ -40,7 +42,6 @@
 }
 
 .hero__content {
-    width: 334px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -64,7 +65,7 @@
     justify-content: center;
     align-items: center;
     padding: 14px 24px 16px;
-    gap: 8px;
+    height: 46px;
     background: #FAFAFA;
     border-radius: 8px;
     font-family: 'Geist', sans-serif;
@@ -76,6 +77,7 @@
     border: none;
     cursor: pointer;
     transition: all 0.2s ease;
+    box-sizing: border-box;
 }
 
 .btn--primary:hover {
@@ -83,7 +85,9 @@
     transform: translateY(-2px);
 }
 
-/* Services Section */
+/* ==========================================================================
+   SERVICES SECTION
+   ========================================================================== */
 .services {
     display: flex;
     flex-direction: column;
@@ -93,6 +97,7 @@
     gap: 50px;
     width: 100%;
     background: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .services__header {
@@ -154,6 +159,9 @@
 .service-card__icon {
     width: 50px;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .service-card__icon svg {
@@ -167,6 +175,7 @@
     align-items: flex-start;
     padding: 0;
     gap: 16px;
+    width: 100%;
 }
 
 .service-card__title {
@@ -187,7 +196,9 @@
     margin: 0;
 }
 
-/* Featured Trip Section */
+/* ==========================================================================
+   FEATURED TRIP SECTION
+   ========================================================================== */
 .featured {
     display: flex;
     flex-direction: row;
@@ -196,12 +207,13 @@
     gap: 50px;
     width: 100%;
     background: #FAFAFA;
+    box-sizing: border-box;
 }
 
 .featured__info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
     gap: 40px;
     width: 433px;
@@ -233,15 +245,17 @@
 .featured__gallery {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     padding: 0;
     gap: 24px;
     flex: 1;
     height: 500px;
+    min-width: 0;
 }
 
 .featured__img-main {
     flex: 1;
+    min-width: 0;
     height: 100%;
     object-fit: cover;
     border-radius: 16px;
@@ -254,8 +268,9 @@
     align-items: flex-start;
     padding: 0;
     gap: 24px;
-    flex: 1;
+    width: 350px;
     height: 100%;
+    flex-shrink: 0;
 }
 
 .featured__card {
@@ -266,7 +281,8 @@
     gap: 16px;
     background: #FFFFFF;
     border-radius: 16px;
-    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .featured__card-title {
@@ -290,21 +306,26 @@
 .featured__bottom {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
     padding: 0;
     gap: 24px;
     width: 100%;
-    flex-shrink: 0;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Desktop: Hide the first image (shown via main), show small image */
+.featured__img-first {
+    display: none;
 }
 
 .featured__img-small {
     flex: 1;
-    width: 100%;
-    height: 238px;
+    height: 100%;
+    min-height: 180px;
     object-fit: cover;
     border-radius: 16px;
-    flex-shrink: 0;
 }
 
 .btn--link,
@@ -321,6 +342,7 @@
     color: #222222;
     text-decoration: none;
     transition: gap 0.2s ease;
+    flex-shrink: 0;
 }
 
 .btn--link:hover,
@@ -328,7 +350,15 @@
     gap: 20px;
 }
 
-/* Trip Category Section */
+.btn--link svg,
+.featured__action svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==========================================================================
+   TRIP CATEGORIES SECTION
+   ========================================================================== */
 .categories {
     display: flex;
     flex-direction: column;
@@ -338,6 +368,7 @@
     gap: 50px;
     width: 100%;
     background: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .categories__header {
@@ -398,13 +429,13 @@
     justify-content: flex-end;
     align-items: center;
     padding: 24px;
-    gap: 20px;
     height: 400px;
     background-size: cover;
     background-position: center;
     border-radius: 16px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .category-card::before {
@@ -412,9 +443,9 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+    border-radius: 16px;
 }
 
-/* Category card sizes based on Figma */
 .category-card--large {
     width: 658px;
     flex-shrink: 0;
@@ -422,6 +453,12 @@
 
 .category-card--medium {
     flex: 1;
+    min-width: 0;
+}
+
+.category-card--small {
+    width: 317px;
+    flex-shrink: 0;
 }
 
 .category-card__content {
@@ -455,33 +492,38 @@
     margin: 0;
 }
 
-/* Why Choose Us Section - Figma Exact */
+/* ==========================================================================
+   WHY CHOOSE US SECTION
+   ========================================================================== */
 .why-us {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 100px 50px;
     gap: 50px;
     width: 100%;
     background: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .why-us__image {
-    width: 645px;
-    height: 612px;
+    width: 50%;
+    max-width: 645px;
+    height: auto;
+    min-height: 612px;
     object-fit: cover;
     border-radius: 16px;
     flex-shrink: 0;
-    flex-grow: 1;
 }
 
 .why-us__content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     gap: 24px;
-    width: 645px;
-    flex-grow: 1;
+    flex: 1;
+    min-width: 0;
 }
 
 .why-us__title {
@@ -514,6 +556,10 @@
     border-bottom: 1px solid #E3E8EF;
 }
 
+.why-card:last-child {
+    border-bottom: none;
+}
+
 .why-card__icon {
     display: flex;
     flex-direction: row;
@@ -525,6 +571,7 @@
     background: #FAFAFA;
     border-radius: 8px;
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .why-card__icon svg {
@@ -558,7 +605,9 @@
     margin: 0;
 }
 
-/* Video Section - Figma Exact */
+/* ==========================================================================
+   VIDEO SECTION
+   ========================================================================== */
 .video-section {
     display: flex;
     flex-direction: column;
@@ -568,7 +617,8 @@
     gap: 50px;
     width: 100%;
     background: #FFFFFF;
-    isolation: isolate;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .video-section__header {
@@ -636,6 +686,7 @@
     cursor: pointer;
     transition: transform 0.3s ease;
     z-index: 2;
+    box-sizing: border-box;
 }
 
 .video-section__play:hover {
@@ -647,7 +698,9 @@
     height: 32px;
 }
 
-/* Promotions Section - Figma Exact */
+/* ==========================================================================
+   PROMOTIONS SECTION
+   ========================================================================== */
 .promotions {
     display: flex;
     flex-direction: column;
@@ -657,6 +710,7 @@
     gap: 50px;
     width: 100%;
     background: #FFFFFF;
+    box-sizing: border-box;
 }
 
 .promotions__header {
@@ -683,7 +737,6 @@
 }
 
 .promotions__subtitle {
-    width: 576px;
     flex: 1;
     font-family: 'Geist', sans-serif;
     font-weight: 400;
@@ -708,7 +761,6 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 32px;
-    gap: 32px;
     width: 658px;
     height: 450px;
     background-size: cover;
@@ -717,6 +769,7 @@
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .voucher-card::before {
@@ -724,6 +777,7 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    border-radius: 16px;
 }
 
 .voucher-card__badge {
@@ -751,7 +805,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 72px;
     width: 100%;
 }
 
@@ -763,6 +816,7 @@
 }
 
 .voucher-card__title {
+    width: 371px;
     font-family: 'Geist', sans-serif;
     font-weight: 500;
     font-size: 56px;
@@ -797,7 +851,6 @@
     line-height: 26px;
     color: #FFFFFF;
     opacity: 0.9;
-    margin: 0;
 }
 
 .voucher-card__discount-value {
@@ -814,7 +867,7 @@
     line-height: 80px;
     letter-spacing: -5px;
     color: #FFFFFF;
-    margin: 0 -20px 0 0;
+    margin-right: -20px;
 }
 
 .voucher-card__discount-percent {
@@ -823,72 +876,496 @@
     justify-content: center;
     width: 33px;
     height: 33px;
-    background: #222222;
+    background: #FFFFFF;
     border-radius: 500px;
     font-family: 'Geist', sans-serif;
-    font-weight: 500;
-    font-size: 13px;
-    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    color: #222222;
 }
 
-/* CTA Section */
-.cta {
+/* ==========================================================================
+   UPCOMING ADVENTURES SECTION
+   ========================================================================== */
+.adventures {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
     padding: 100px 50px;
+    gap: 50px;
     width: 100%;
     background: #FFFFFF;
+    box-sizing: border-box;
 }
 
-.cta__container {
+.adventures__info {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 50px;
-    gap: 32px;
-    width: 100%;
-    max-width: 1340px;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border-radius: 24px;
-    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    height: 500px;
 }
 
-.cta__title {
+.adventures__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.adventures__title {
     font-family: 'Geist', sans-serif;
     font-weight: 500;
     font-size: 48px;
     line-height: 62px;
     letter-spacing: -2px;
     text-transform: capitalize;
+    color: #222222;
+    margin: 0;
+}
+
+.adventures__desc {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+.adventures__nav {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+}
+
+.adventures__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #222222;
+    border-radius: 500px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.adventures__nav-btn--active {
+    background: #222222;
+}
+
+.adventures__nav-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.adventures__nav-btn--active svg {
+    color: #FFFFFF;
+}
+
+.adventures__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 867px;
+    height: 500px;
+    flex-shrink: 0;
+}
+
+.trip-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px;
+    width: 422px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.trip-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+    border-radius: 16px;
+}
+
+.trip-card__badge {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: #FFFFFF;
+    border: 1px solid #E3E8EF;
+    border-radius: 600px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #222222;
+}
+
+.trip-card__detail {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.trip-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.trip-card__price {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.trip-card__duration {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.trip-card__action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.trip-card__action svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==========================================================================
+   TESTIMONIAL SECTION
+   ========================================================================== */
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    gap: 50px;
+    width: 100%;
+    background: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.testimonial__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 1340px;
+}
+
+.testimonial__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #222222;
+    margin: 0;
+    text-align: center;
+}
+
+.testimonial__subtitle {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #7C7C7C;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonial__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 1340px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.testimonial__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    padding: 32px;
+    width: 690px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.testimonial__quote {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #222222;
+    margin: 0;
+}
+
+.testimonial__divider {
+    width: 100%;
+    height: 1px;
+    background: #E3E8EF;
+}
+
+.testimonial__profile {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.testimonial__avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 500px;
+    object-fit: cover;
+}
+
+.testimonial__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+.testimonial__name {
+    font-family: 'Geist', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: #222222;
+    margin: 0;
+}
+
+.testimonial__location {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+/* ==========================================================================
+   BLOG SECTION
+   ========================================================================== */
+.blog-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    gap: 50px;
+    width: 100%;
+    background: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.blog-preview__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+    letter-spacing: -2px;
+    text-transform: capitalize;
+    color: #222222;
+    margin: 0;
+    text-align: center;
+}
+
+.blog-preview__grid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+    max-width: 1340px;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.blog-card--large {
+    width: 641px;
+    flex-shrink: 0;
+}
+
+.blog-card--small {
+    flex: 1;
+    min-width: 0;
+}
+
+.blog-card__image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.blog-card--large .blog-card__image {
+    height: 450px;
+}
+
+.blog-card--small .blog-card__image {
+    height: 313px;
+}
+
+.blog-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+}
+
+.blog-card__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #222222;
+    margin: 0;
+}
+
+.blog-card__date {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    color: #7C7C7C;
+    margin: 0;
+}
+
+/* ==========================================================================
+   CTA + FOOTER COMBINED SECTION
+   ========================================================================== */
+.cta-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.cta-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ==========================================================================
+   CTA SECTION (Inside combined wrapper)
+   ========================================================================== */
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    gap: 32px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cta__title {
+    max-width: 803px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 90px;
+    letter-spacing: -3px;
+    text-transform: capitalize;
     color: #FFFFFF;
     margin: 0;
 }
 
 .cta__desc {
+    width: 100%;
+    max-width: 1341px;
     font-family: 'Geist', sans-serif;
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;
+    color: #FFFFFF;
     margin: 0;
 }
 
 .cta__btn {
-    background: #FFFFFF;
+    background: #FAFAFA;
     color: #222222;
 }
 
-.cta__btn:hover {
-    background: #FAFAFA;
-}
-
-/* ===================================
-   Responsive Styles
-   =================================== */
-
-@media (max-width: 1024px) {
+/* ==========================================================================
+   RESPONSIVE - TABLET (max-width: 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
     .hero {
         padding: 0 24px 24px;
     }
@@ -906,6 +1383,7 @@
         width: 100%;
         font-size: 48px;
         line-height: 56px;
+        letter-spacing: -2px;
     }
 
     .hero__content {
@@ -946,11 +1424,13 @@
 
     .service-card {
         flex: 0 0 calc(50% - 12px);
+        gap: 32px;
     }
 
     .featured {
         flex-direction: column;
         padding: 60px 24px;
+        gap: 32px;
     }
 
     .featured__info {
@@ -968,26 +1448,27 @@
     }
 
     .featured__gallery {
-        flex-direction: column;
-        height: auto;
+        flex-direction: row;
+        height: 400px;
     }
 
     .featured__img-main {
-        height: 300px;
+        flex: 1;
+        height: 100%;
     }
 
     .featured__side {
-        flex-direction: row;
-        height: auto;
-    }
-
-    .featured__card {
-        flex: 1;
+        width: 280px;
+        height: 100%;
     }
 
     .featured__img-small {
-        flex: 1;
-        height: 200px;
+        height: 150px;
+        min-height: auto;
+    }
+
+    .featured__img-first {
+        display: none;
     }
 
     .categories {
@@ -1010,14 +1491,18 @@
         line-height: 28px;
     }
 
-    .categories__grid .category-card {
-        flex: 0 0 calc(50% - 12px);
-        height: 300px;
+    .categories__row {
+        flex-direction: column;
     }
 
-    .category-card--large {
-        width: auto;
-        flex: 0 0 calc(50% - 12px);
+    .category-card--large,
+    .category-card--medium,
+    .category-card--small {
+        width: 100%;
+    }
+
+    .category-card {
+        height: 300px;
     }
 
     .category-card__title {
@@ -1026,8 +1511,8 @@
     }
 
     .category-card__desc {
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 28px;
     }
 
     .why-us {
@@ -1040,18 +1525,27 @@
         height: 350px;
     }
 
+    .why-us__content {
+        width: 100%;
+    }
+
     .why-us__title {
         font-size: 36px;
         line-height: 46px;
     }
 
-    .why-us__subtitle {
-        font-size: 18px;
-        line-height: 28px;
+    .why-card__title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .why-card__desc {
+        font-size: 16px;
+        line-height: 26px;
     }
 
     .video-section {
-        padding: 60px 24px;
+        padding: 50px 24px;
     }
 
     .video-section__title {
@@ -1062,6 +1556,10 @@
     .video-section__subtitle {
         font-size: 18px;
         line-height: 28px;
+    }
+
+    .video-section__player {
+        height: 400px;
     }
 
     .promotions {
@@ -1089,109 +1587,675 @@
     }
 
     .voucher-card {
-        height: 300px;
+        width: 100%;
+        height: 350px;
+    }
+
+    .voucher-card__title {
+        font-size: 36px;
+        line-height: 42px;
+        width: 100%;
+    }
+
+    .voucher-card__discount-number {
+        font-size: 64px;
+        line-height: 56px;
+    }
+
+    .adventures {
+        flex-direction: column;
+        padding: 60px 24px;
+    }
+
+    .adventures__info {
+        width: 100%;
+        height: auto;
+        gap: 24px;
+    }
+
+    .adventures__title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .adventures__desc {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .adventures__cards {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .trip-card {
+        width: 100%;
+        height: 400px;
+    }
+
+    .testimonial {
+        padding: 60px 24px;
+    }
+
+    .testimonial__title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .testimonial__subtitle {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .testimonial__container {
+        height: 450px;
+    }
+
+    .testimonial__card {
+        width: 90%;
+        padding: 24px;
+    }
+
+    .testimonial__quote {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .blog-preview {
+        padding: 60px 24px;
+    }
+
+    .blog-preview__title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .blog-preview__grid {
+        flex-direction: column;
+    }
+
+    .blog-card--large,
+    .blog-card--small {
+        width: 100%;
+    }
+
+    .blog-card--large .blog-card__image,
+    .blog-card--small .blog-card__image {
+        height: 250px;
+    }
+
+    .blog-card__title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .blog-card__date {
+        font-size: 16px;
+        line-height: 26px;
     }
 
     .cta {
         padding: 60px 24px;
     }
 
-    .cta__container {
-        padding: 50px 24px;
-    }
-
     .cta__title {
-        font-size: 36px;
-        line-height: 46px;
+        font-size: 48px;
+        line-height: 54px;
+        letter-spacing: -2px;
     }
 
     .cta__desc {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 20px;
+        line-height: 32px;
     }
 }
 
-@media (max-width: 768px) {
+/* ==========================================================================
+   RESPONSIVE - MOBILE (max-width: 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    .hero {
+        padding: 0 16px 24px;
+    }
+
     .hero__container {
-        min-height: 400px;
+        height: 487px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
         padding: 24px;
+        gap: 24px;
     }
 
     .hero__title {
-        font-size: 32px;
-        line-height: 40px;
+        width: 100%;
+        font-size: 36px;
+        line-height: 42px;
         letter-spacing: -1px;
     }
 
     .hero__content {
+        width: 100%;
         gap: 24px;
     }
 
     .hero__desc {
+        width: 100%;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .services {
+        padding: 16px 16px 32px;
+        gap: 24px;
+    }
+
+    .services__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .services__title {
+        width: 100%;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .services__subtitle {
+        width: 100%;
         font-size: 16px;
         line-height: 26px;
     }
 
     .services__grid {
-        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 16px;
     }
 
     .service-card {
-        flex: 0 0 100%;
+        flex: 0 0 calc(50% - 8px);
         gap: 24px;
     }
 
+    .service-card__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .service-card__content {
+        gap: 8px;
+    }
+
     .service-card__title {
-        font-size: 20px;
-        line-height: 26px;
+        font-size: 18px;
+        line-height: 24px;
     }
 
     .service-card__desc {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .featured {
+        flex-direction: column;
+        padding: 32px 16px;
+        gap: 24px;
+    }
+
+    .featured__info {
+        width: 100%;
+        gap: 16px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .featured__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .featured__desc {
         font-size: 16px;
         line-height: 26px;
     }
 
+    /* Mobile: Stack vertically - Images row, then card, then button */
+    .featured__gallery {
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+    }
+
+    /* Mobile: Hide main image, use the two in bottom */
+    .featured__img-main {
+        display: none;
+    }
+
     .featured__side {
         flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 16px;
+    }
+
+    /* Mobile: Images side by side at top, aligned at bottom */
+    .featured__bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 16px;
+        order: -1;
+    }
+
+    /* Mobile: Show first image */
+    .featured__img-first {
+        display: block;
+        flex: 1;
+        min-width: 0;
+        height: 296px;
+        object-fit: cover;
+        border-radius: 8px;
     }
 
     .featured__img-small {
-        height: 200px;
+        flex: 1;
+        min-width: 0;
+        height: 250px;
+        min-height: auto;
+        border-radius: 8px;
     }
 
-    .categories__grid .category-card {
-        flex: 0 0 100%;
+    .featured__card {
+        width: 100%;
+        padding: 24px;
+        gap: 16px;
+        border-radius: 16px;
+        order: 0;
+    }
+
+    .featured__card-title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .featured__card-desc {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .featured__action {
+        order: 1;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .categories {
+        padding: 32px 16px;
+        gap: 16px;
+    }
+
+    .categories__header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .categories__title {
+        width: 100%;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .categories__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .categories__grid {
+        gap: 16px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .categories__row {
+        flex-direction: row;
+        gap: 16px;
+        flex-wrap: nowrap;
+    }
+
+    .category-card--large,
+    .category-card--medium,
+    .category-card--small {
+        width: 250px;
+        height: 250px;
+        flex-shrink: 0;
+    }
+
+    .category-card__title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .category-card__desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .why-us {
+        flex-direction: column;
+        padding: 32px 16px;
+        gap: 24px;
+    }
+
+    .why-us__image {
+        width: 100%;
         height: 250px;
     }
 
-    .category-card--large {
-        flex: 0 0 100%;
+    .why-us__content {
+        width: 100%;
+        gap: 16px;
     }
 
-    .why-us__cards {
-        gap: 16px;
+    .why-us__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
     }
 
     .why-card {
-        padding: 16px;
+        padding: 0 0 16px;
+        gap: 12px;
+    }
+
+    .why-card__icon {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .why-card__title {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .why-card__desc {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .video-section {
+        padding: 32px 16px;
+        gap: 24px;
+    }
+
+    .video-section__header {
         gap: 16px;
     }
 
-    .promotions__grid .voucher-card {
-        height: 280px;
+    .video-section__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
     }
 
-    .cta__container {
-        padding: 40px 20px;
+    .video-section__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .video-section__player {
+        height: 250px;
+    }
+
+    .video-section__play {
+        width: 50px;
+        height: 50px;
+    }
+
+    .video-section__play svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .promotions {
+        padding: 32px 16px;
+        gap: 24px;
+    }
+
+    .promotions__header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .promotions__title {
+        width: 100%;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .promotions__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .promotions__grid {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .voucher-card {
+        width: 100%;
+        height: 200px;
+        padding: 16px;
+    }
+
+    .voucher-card__badge {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 4px 12px;
+    }
+
+    .voucher-card__content {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .voucher-card__title {
+        font-size: 24px;
+        line-height: 30px;
+        width: auto;
+    }
+
+    .voucher-card__discount-number {
+        font-size: 48px;
+        line-height: 40px;
+        margin-right: -10px;
+    }
+
+    .voucher-card__discount-percent {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .adventures {
+        flex-direction: column;
+        padding: 32px 16px;
+        gap: 24px;
+    }
+
+    .adventures__info {
+        width: 100%;
+        height: auto;
+        gap: 16px;
+    }
+
+    .adventures__heading {
+        text-align: center;
+    }
+
+    .adventures__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+
+    .adventures__desc {
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+    }
+
+    .adventures__nav {
+        justify-content: center;
+        order: 1;
+    }
+
+    .adventures__cards {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        gap: 16px;
+    }
+
+    .trip-card {
+        width: 100%;
+        height: 300px;
+    }
+
+    .trip-card__price {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .trip-card__duration {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .testimonial {
+        padding: 32px 16px;
+        gap: 24px;
+    }
+
+    .testimonial__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .testimonial__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .testimonial__container {
+        height: auto;
+        min-height: 400px;
+        padding: 16px;
+    }
+
+    .testimonial__card {
+        width: 100%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .testimonial__quote {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .testimonial__avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .testimonial__name {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .testimonial__location {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .blog-preview {
+        padding: 32px 16px;
+        gap: 24px;
+    }
+
+    .blog-preview__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .blog-preview__grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .blog-card--large,
+    .blog-card--small {
+        width: 100%;
+    }
+
+    .blog-card--large .blog-card__image,
+    .blog-card--small .blog-card__image {
+        height: 250px;
+    }
+
+
+    .blog-card__title {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .blog-card--large .blog-card__title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .blog-card__date {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* CTA Section - Mobile Figma 390px */
+    .cta {
+        padding: 50px 16px;
+        gap: 16px;
     }
 
     .cta__title {
-        font-size: 28px;
+        font-size: 30px;
         line-height: 36px;
+        letter-spacing: -1px;
+        max-width: 100%;
+    }
+
+    .cta__title em {
+        font-style: italic;
     }
 
     .cta__desc {
         font-size: 16px;
         line-height: 26px;
     }
+
+    .cta__btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        height: auto;
+    }
 }
+

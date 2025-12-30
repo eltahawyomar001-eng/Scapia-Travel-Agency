@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore curated trips across the globe with SCAPIA. Find your perfect journey - from family holidays to romantic getaways.">
+    <title>Trip - SCAPIA Travel</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/trips.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+</head>
+
+<body>
+    <div class="page">
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">SCAPIA</a>
+
+            <div class="nav__menu" id="navMenu">
+                <a href="index.html" class="nav__link">Home</a>
+                <a href="about.html" class="nav__link">About Us</a>
+                <a href="trips.html" class="nav__link nav__link--active">Trip</a>
+                <a href="contact.html" class="nav__link">Contact</a>
+            </div>
+
+            <div class="nav__actions">
+                <button class="nav__lang-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <span>EN</span>
+                </button>
+            </div>
+
+            <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <main class="main">
+            <!-- Hero Section -->
+            <section class="trips-hero">
+                <div class="trips-hero__content">
+                    <div class="trips-hero__header">
+                        <h1 class="trips-hero__title">Find Your <br>Perfect Journey</h1>
+                        <p class="trips-hero__desc">Explore curated trips across the globe, designed for every type of traveler.</p>
+                    </div>
+                    <div class="trips-hero__image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400" alt="Mountain lake landscape">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trip Category Section -->
+            <section class="trip-category">
+                <div class="trip-category__header">
+                    <h2 class="trip-category__title">Explore Handpicked Destinations and Find the Perfect Trip for You</h2>
+                    <p class="trip-category__subtitle">Embark on unforgettable journeys with Scapia as your guide.</p>
+                </div>
+                <div class="trip-category__grid">
+                    <!-- Row 1 -->
+                    <div class="trip-category__row">
+                        <a href="trip-details.html" class="category-card category-card--large" style="background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800');">
+                            <div class="category-card__content">
+                                <h3 class="category-card__title">Family Holidays</h3>
+                                <p class="category-card__desc">Fun-filled trips everyone in the family will love.</p>
+                            </div>
+                        </a>
+                        <a href="trip-details.html" class="category-card category-card--flex" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=800');">
+                            <div class="category-card__content">
+                                <h3 class="category-card__title">Romantic Getaways</h3>
+                                <p class="category-card__desc">Create unforgettable memories with your loved one.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="trip-category__row">
+                        <a href="trip-details.html" class="category-card category-card--large" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800');">
+                            <div class="category-card__content">
+                                <h3 class="category-card__title">Adventure Escapes</h3>
+                                <p class="category-card__desc">Conquer mountains, jungles, and untamed lands.</p>
+                            </div>
+                        </a>
+                        <a href="trip-details.html" class="category-card category-card--flex" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600');">
+                            <div class="category-card__content">
+                                <h3 class="category-card__title">Cultural Journeys</h3>
+                                <p class="category-card__desc">Immerse yourself in rich traditions and heritage.</p>
+                            </div>
+                        </a>
+                        <a href="trip-details.html" class="category-card category-card--flex" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600');">
+                            <div class="category-card__content">
+                                <h3 class="category-card__title">Island Retreats</h3>
+                                <p class="category-card__desc">Relax on sun drenched islands</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Activities Section -->
+            <section class="activities">
+                <div class="activities__header">
+                    <h2 class="activities__title">Must-Try Activities<br>for Every Traveler</h2>
+                    <p class="activities__subtitle">Make every moment unforgettable with these top experiences.</p>
+                </div>
+                <div class="activities__grid">
+                    <div class="activity-card activity-card--text-first">
+                        <div class="activity-card__text">
+                            <h3 class="activity-card__title">Sunset Sailing</h3>
+                            <p class="activity-card__desc">Cruise along beautiful coastlines while enjoying breathtaking sunsets.</p>
+                        </div>
+                        <div class="activity-card__image">
+                            <img src="https://images.unsplash.com/photo-1500514966906-fe245eea9344?w=400" alt="Sunset sailing">
+                        </div>
+                    </div>
+                    <div class="activity-card activity-card--image-first">
+                        <div class="activity-card__image">
+                            <img src="https://images.unsplash.com/photo-1440342359743-84fcb8c21f21?w=400" alt="Jungle trekking">
+                        </div>
+                        <div class="activity-card__text">
+                            <h3 class="activity-card__title">Jungle Trekking</h3>
+                            <p class="activity-card__desc">Venture into lush rainforests and discover nature's hidden wonders.</p>
+                        </div>
+                    </div>
+                    <div class="activity-card activity-card--text-first">
+                        <div class="activity-card__text">
+                            <h3 class="activity-card__title">Cultural Immersion</h3>
+                            <p class="activity-card__desc">Connect with local communities and traditions in meaningful ways.</p>
+                        </div>
+                        <div class="activity-card__image">
+                            <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=400" alt="Cultural immersion">
+                        </div>
+                    </div>
+                    <div class="activity-card activity-card--image-first">
+                        <div class="activity-card__image">
+                            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=400" alt="Wildlife safari">
+                        </div>
+                        <div class="activity-card__text">
+                            <h3 class="activity-card__title">Wildlife Safaris</h3>
+                            <p class="activity-card__desc">Experience the thrill of spotting wildlife up close in their natural habitats.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popular Destinations Section -->
+            <section class="popular-destinations">
+                <div class="popular-destinations__content">
+                    <div class="popular-destinations__header">
+                        <h2 class="popular-destinations__title">Explore the World's Most Popular Travel Destinations</h2>
+                        <p class="popular-destinations__subtitle">Make every moment unforgettable with these top experiences.</p>
+                    </div>
+                    <div class="popular-destinations__map">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=900" alt="World map" class="popular-destinations__map-img">
+                        
+                        <!-- Flag markers on the map -->
+                        <div class="map-flag map-flag--1">🇺🇸</div>
+                        <div class="map-flag map-flag--2">🇫🇷</div>
+                        <div class="map-flag map-flag--3">🇮🇩</div>
+                        
+                        <!-- Dotted connection lines SVG -->
+                        <svg class="map-connections" viewBox="0 0 820 378" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 100 70 Q 50 130 30 135" stroke="#FF4757" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+                            <path d="M 315 31 Q 330 60 304 87" stroke="#FF4757" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+                            <path d="M 562 144 Q 540 180 491 201" stroke="#FF4757" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+                        </svg>
+                        
+                        <!-- Destination Cards -->
+                        <div class="destination-card destination-card--1">
+                            <div class="destination-card__pin">
+                                <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="23.5" cy="23.5" r="23.5" fill="#FF4757"/>
+                                    <path d="M23.5 12C19.36 12 16 15.36 16 19.5C16 25.25 23.5 33 23.5 33C23.5 33 31 25.25 31 19.5C31 15.36 27.64 12 23.5 12ZM23.5 22C22.12 22 21 20.88 21 19.5C21 18.12 22.12 17 23.5 17C24.88 17 26 18.12 26 19.5C26 20.88 24.88 22 23.5 22Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="destination-card__body">
+                                <div class="destination-card__image">
+                                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300" alt="Colorado">
+                                </div>
+                                <h4 class="destination-card__title">Colorado, United States</h4>
+                                <p class="destination-card__desc">Discover the breathtaking landscapes of Canada</p>
+                            </div>
+                        </div>
+                        <div class="destination-card destination-card--2">
+                            <div class="destination-card__pin">
+                                <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="23.5" cy="23.5" r="23.5" fill="#FF4757"/>
+                                    <path d="M23.5 12C19.36 12 16 15.36 16 19.5C16 25.25 23.5 33 23.5 33C23.5 33 31 25.25 31 19.5C31 15.36 27.64 12 23.5 12ZM23.5 22C22.12 22 21 20.88 21 19.5C21 18.12 22.12 17 23.5 17C24.88 17 26 18.12 26 19.5C26 20.88 24.88 22 23.5 22Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="destination-card__body">
+                                <div class="destination-card__image">
+                                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=300" alt="Paris">
+                                </div>
+                                <h4 class="destination-card__title">Paris, France</h4>
+                                <p class="destination-card__desc">Step into the timeless elegance of Paris,</p>
+                            </div>
+                        </div>
+                        <div class="destination-card destination-card--3">
+                            <div class="destination-card__pin">
+                                <svg width="47" height="47" viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="23.5" cy="23.5" r="23.5" fill="#FF4757"/>
+                                    <path d="M23.5 12C19.36 12 16 15.36 16 19.5C16 25.25 23.5 33 23.5 33C23.5 33 31 25.25 31 19.5C31 15.36 27.64 12 23.5 12ZM23.5 22C22.12 22 21 20.88 21 19.5C21 18.12 22.12 17 23.5 17C24.88 17 26 18.12 26 19.5C26 20.88 24.88 22 23.5 22Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="destination-card__body">
+                                <div class="destination-card__image">
+                                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=300" alt="Bali">
+                                </div>
+                                <h4 class="destination-card__title">Bali, Indonesia</h4>
+                                <p class="destination-card__desc">Uncover the enchanting diversity of Bali</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Promotions Section -->
+            <section class="promotions">
+                <div class="promotions__header">
+                    <h2 class="promotions__title">Explore Unmissable Travel<br>Deals Tailored Just for You</h2>
+                    <p class="promotions__subtitle">Discover exclusive offers curated just for you — from last-minute escapes to premium getaways.</p>
+                </div>
+                <div class="promotions__voucher" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400');">
+                    <span class="promotions__badge">Limited slots available — reserve your dream trip today</span>
+                    <div class="promotions__detail">
+                        <div class="promotions__info">
+                            <h3 class="promotions__promo-title">Travel More,<br>Spend Less</h3>
+                            <div class="promotions__discount">
+                                <span class="promotions__discount-label">Discount up to</span>
+                                <div class="promotions__discount-value">
+                                    <span class="promotions__discount-number">40</span>
+                                    <span class="promotions__discount-percent">%</span>
+                                </div>
+                                <span class="promotions__discount-note">*Flexible booking and cancellation policies</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="promotions__btn">Book Now</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Explore All Trips Section -->
+            <section class="explore-trips">
+                <div class="explore-trips__header">
+                    <h2 class="explore-trips__title">Explore All Our Trips</h2>
+                    <p class="explore-trips__subtitle">Every journey is carefully crafted to bring your travel dreams to life.</p>
+                </div>
+                <div class="explore-trips__grid">
+                    <!-- Row 1 -->
+                    <div class="explore-trips__row">
+                        <a href="trip-details.html" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600');">
+                            <span class="trip-card__location">Bali, Indonesia</span>
+                            <div class="trip-card__detail">
+                                <div class="trip-card__info">
+                                    <span class="trip-card__price">Starting at $1,450</span>
+                                    <span class="trip-card__dates">7 Days, June 15–21, 2030</span>
+                                </div>
+                                <span class="trip-card__link">Learn More <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                        </a>
+                        <a href="trip-details.html" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=600');">
+                            <span class="trip-card__location">Rome, Italy</span>
+                            <div class="trip-card__detail">
+                                <div class="trip-card__info">
+                                    <span class="trip-card__price">Starting at $1,850</span>
+                                    <span class="trip-card__dates">5 Days, July 10–14, 2030</span>
+                                </div>
+                                <span class="trip-card__link">Learn More <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                        </a>
+                        <a href="trip-details.html" class="trip-card trip-card--fixed" style="background-image: url('https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=600');">
+                            <span class="trip-card__location">Amalfi Coast, Italy</span>
+                            <div class="trip-card__detail">
+                                <div class="trip-card__info">
+                                    <span class="trip-card__price">Starting at $2,100</span>
+                                    <span class="trip-card__dates">5 Days, July 3–7, 2030</span>
+                                </div>
+                                <span class="trip-card__link">Learn More <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="explore-trips__row">
+                        <a href="trip-details.html" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600');">
+                            <span class="trip-card__location">Marrakech, Morocco</span>
+                            <div class="trip-card__detail">
+                                <div class="trip-card__info">
+                                    <span class="trip-card__price">Starting at $1,600</span>
+                                    <span class="trip-card__dates">6 Days, September 5–10, 2030</span>
+                                </div>
+                                <span class="trip-card__link">Learn More <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                        </a>
+                        <a href="trip-details.html" class="trip-card" style="background-image: url('https://images.unsplash.com/photo-1531761535209-180857e963b9?w=600');">
+                            <span class="trip-card__location">Patagonia, Argentina</span>
+                            <div class="trip-card__detail">
+                                <div class="trip-card__info">
+                                    <span class="trip-card__price">Starting at $3,200</span>
+                                    <span class="trip-card__dates">10 Days, August 15–25, 2030</span>
+                                </div>
+                                <span class="trip-card__link">Learn More <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                        </a>
+                        <a href="trip-details.html" class="trip-card trip-card--fixed" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600');">
+                            <span class="trip-card__location">Kyoto, Japan</span>
+                            <div class="trip-card__detail">
+                                <div class="trip-card__info">
+                                    <span class="trip-card__price">Starting at $1,850</span>
+                                    <span class="trip-card__dates">7 Days, June 12–18, 2030</span>
+                                </div>
+                                <span class="trip-card__link">Learn More <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How to Book Section -->
+            <section class="how-to-book">
+                <div class="how-to-book__header">
+                    <h2 class="how-to-book__title">How to Book Your Adventure</h2>
+                    <p class="how-to-book__subtitle">The Scapia experience goes beyond travel — it's about creating memories for life.</p>
+                </div>
+                <div class="how-to-book__grid">
+                    <div class="process-card">
+                        <span class="process-card__number">01</span>
+                        <div class="process-card__content">
+                            <h3 class="process-card__title">Explore & Choose</h3>
+                            <p class="process-card__desc">Browse our curated trips and pick your perfect adventure.</p>
+                        </div>
+                    </div>
+                    <div class="process-card process-card--offset">
+                        <span class="process-card__number">02</span>
+                        <div class="process-card__content">
+                            <h3 class="process-card__title">Customize Your Trip</h3>
+                            <p class="process-card__desc">Tailor the itinerary to fit your needs and preferences.</p>
+                        </div>
+                    </div>
+                    <div class="process-card">
+                        <span class="process-card__number">03</span>
+                        <div class="process-card__content">
+                            <h3 class="process-card__title">Confirm Your Booking</h3>
+                            <p class="process-card__desc">Secure your spot with a simple and quick reservation process.</p>
+                        </div>
+                    </div>
+                    <div class="process-card process-card--offset">
+                        <span class="process-card__number">04</span>
+                        <div class="process-card__content">
+                            <h3 class="process-card__title">Pack & Get Ready</h3>
+                            <p class="process-card__desc">Receive your full trip details and preparation checklist.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- CTA + Footer Combined Section -->
+        <div class="cta-footer" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400');">
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <h2 class="cta-section__title">Ready for Your Next<br>Adventure?</h2>
+                <p class="cta-section__desc">Let's start planning your journey today!</p>
+                <a href="contact.html" class="cta-section__btn">Explore Now</a>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <!-- Background Watermark -->
+                <div class="footer__watermark">SCAPIA</div>
+
+                <!-- Left Side - Brand Info -->
+                <div class="footer__left">
+                    <div class="footer__brand">
+                        <span class="footer__logo">SCAPIA</span>
+                        <p class="footer__desc">Explore the world effortlessly with Scapia, your trusted travel partner. We bring unforgettable journeys to life with expert planning, personalized services, and a commitment to excellence.</p>
+                    </div>
+                    <div class="footer__contact">
+                        <div class="footer__contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="10" r="3" stroke="#FFFFFF" stroke-width="2"/>
+                            </svg>
+                            <span>456 Explorer Lane, New York, NY 10001</span>
+                        </div>
+                        <div class="footer__contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>+1 (234) 567-8900</span>
+                        </div>
+                        <div class="footer__contact-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="22,6 12,13 2,6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>hello@scapiatravel.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side - Links & Newsletter -->
+                <div class="footer__right">
+                    <!-- Row container for Quick Links + Follow Us -->
+                    <div class="footer__links-row">
+                        <div class="footer__column">
+                            <h4 class="footer__title">Quick Links</h4>
+                            <div class="footer__links">
+                                <a href="index.html" class="footer__link">Home</a>
+                                <a href="about.html" class="footer__link">Destinations</a>
+                                <a href="trips.html" class="footer__link">Trips</a>
+                                <a href="trips.html" class="footer__link">Services</a>
+                                <a href="trips.html" class="footer__link">Blog</a>
+                                <a href="contact.html" class="footer__link">Contact Us</a>
+                            </div>
+                        </div>
+
+                        <div class="footer__column">
+                            <h4 class="footer__title">Follow Us</h4>
+                            <div class="footer__social">
+                                <a href="#" class="footer__social-link" aria-label="Facebook">
+                                    <span>FB</span>
+                                </a>
+                                <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                                    <span>IN</span>
+                                </a>
+                                <a href="#" class="footer__social-link" aria-label="Instagram">
+                                    <span>IG</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer__newsletter">
+                        <p class="footer__newsletter-text">Get the latest travel deals, tips, and destination inspirations straight to your inbox.</p>
+                        <form class="footer__newsletter-form">
+                            <input type="email" placeholder="Enter your email" class="footer__newsletter-input">
+                            <button type="submit" class="footer__newsletter-btn">Send</button>
+                        </form>
+                        <div class="footer__bottom">
+                            <p class="footer__copyright">2030 Scapia Travel Agency. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

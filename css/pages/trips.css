@@ -1,0 +1,1639 @@
+/* ==========================================================================
+   Trips Page Styles - Pixel-Perfect Figma Match
+   Desktop: 1440px | Mobile: 390px
+   ========================================================================== */
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.trips-hero {
+    padding: 50px;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.trips-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+.trips-hero__header {
+    display: flex;
+    gap: 50px;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.trips-hero__title {
+    font-family: "Geist", sans-serif;
+    font-size: 84px;
+    line-height: 90px;
+    font-weight: 500;
+    letter-spacing: -3px;
+    color: #222222;
+    text-transform: capitalize;
+    flex: 1;
+    min-width: 0;
+}
+
+.trips-hero__desc {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #7C7C7C;
+    flex: 1;
+    min-width: 0;
+}
+
+.trips-hero__image {
+    width: 100%;
+    height: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.trips-hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   TRIP CATEGORY SECTION
+   ========================================================================== */
+.trip-category {
+    padding: 100px 50px;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.trip-category__header {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.trip-category__title {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #222222;
+    text-transform: capitalize;
+    width: 724px;
+    flex-shrink: 0;
+}
+
+.trip-category__subtitle {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #7C7C7C;
+    flex: 1;
+    min-width: 0;
+}
+
+.trip-category__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.trip-category__row {
+    display: flex;
+    gap: 24px;
+}
+
+.category-card {
+    height: 400px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 60%);
+    border-radius: 16px;
+}
+
+.category-card:hover {
+    transform: scale(1.02);
+}
+
+.category-card--large {
+    width: 658px;
+    flex-shrink: 0;
+}
+
+.category-card--flex {
+    flex: 1;
+    min-width: 0;
+}
+
+/* For Row 2, the two flex cards share remaining space */
+.trip-category__row:nth-child(2) .category-card--flex {
+    flex: 1;
+    min-width: 0;
+}
+
+.category-card__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #FFFFFF;
+}
+
+.category-card__title {
+    font-family: "Geist", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+.category-card__desc {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   ACTIVITIES SECTION
+   ========================================================================== */
+.activities {
+    padding: 100px 50px;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.activities__header {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.activities__title {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #222222;
+    text-transform: capitalize;
+    width: 724px;
+    flex-shrink: 0;
+}
+
+.activities__subtitle {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #7C7C7C;
+    flex: 1;
+    min-width: 0;
+}
+
+.activities__grid {
+    display: flex;
+    gap: 24px;
+}
+
+.activity-card {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: 606px;
+}
+
+.activity-card--text-first {
+    flex-direction: column;
+}
+
+.activity-card--image-first {
+    flex-direction: column;
+}
+
+.activity-card--image-first .activity-card__image {
+    order: -1;
+}
+
+.activity-card__text {
+    flex: 1;
+    background-color: #FAFAFA;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activity-card__title {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #222222;
+    text-transform: capitalize;
+}
+
+.activity-card__desc {
+    font-family: "Geist", sans-serif;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+.activity-card__image {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.activity-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   POPULAR DESTINATIONS SECTION
+   ========================================================================== */
+.popular-destinations {
+    padding: 132px 50px;
+    background-color: #FAFAFA;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.popular-destinations__content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.popular-destinations__header {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.popular-destinations__title {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #222222;
+    text-transform: capitalize;
+}
+
+.popular-destinations__subtitle {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+.popular-destinations__map {
+    width: 820px;
+    height: 378px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.popular-destinations__map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Map flag markers */
+.map-flag {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.map-flag--1 {
+    left: 100px;
+    top: 70px;
+}
+
+.map-flag--2 {
+    left: 315px;
+    top: 31px;
+}
+
+.map-flag--3 {
+    left: 562px;
+    top: 144px;
+}
+
+/* Map connection lines */
+.map-connections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Destination Cards */
+.destination-card {
+    position: absolute;
+    width: 221px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.06);
+    padding: 12px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.destination-card__pin {
+    width: 47px;
+    height: 47px;
+    margin-top: -47px;
+    margin-bottom: -12px;
+    z-index: 1;
+}
+
+.destination-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+}
+
+.destination-card__image {
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.destination-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destination-card__title {
+    font-family: "Geist", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #222222;
+}
+
+.destination-card__desc {
+    font-family: "Geist", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+/* Position destination cards relative to map (820px width) */
+/* Based on Figma: card positions from section left minus map container offset */
+.destination-card--1 {
+    left: -87px;
+    top: 135px;
+}
+
+.destination-card--2 {
+    left: 194px;
+    top: 87px;
+}
+
+.destination-card--3 {
+    left: 471px;
+    top: 201px;
+}
+
+/* ==========================================================================
+   PROMOTIONS SECTION
+   ========================================================================== */
+.promotions {
+    padding: 100px 50px;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.promotions__header {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.promotions__title {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #222222;
+    text-transform: capitalize;
+    width: 724px;
+    flex-shrink: 0;
+}
+
+.promotions__subtitle {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #7C7C7C;
+    flex: 1;
+    min-width: 0;
+}
+
+.promotions__voucher {
+    width: 100%;
+    height: 450px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    overflow: hidden;
+}
+
+.promotions__voucher::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border-radius: 16px;
+}
+
+.promotions__badge {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    padding: 6px 16px;
+    border-radius: 500px;
+    font-family: "Geist", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #222222;
+    opacity: 0.9;
+    align-self: flex-start;
+}
+
+.promotions__detail {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.promotions__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.promotions__promo-title {
+    font-family: "Geist", sans-serif;
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.promotions__discount {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.promotions__discount-label {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+.promotions__discount-value {
+    display: flex;
+    align-items: flex-end;
+}
+
+.promotions__discount-number {
+    font-family: "Geist", sans-serif;
+    font-size: 100px;
+    line-height: 80px;
+    font-weight: 600;
+    letter-spacing: -5px;
+    color: #FFFFFF;
+}
+
+.promotions__discount-percent {
+    font-family: "Geist", sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.promotions__discount-note {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #FFFFFF;
+    opacity: 0.9;
+}
+
+.promotions__btn {
+    background: #FAFAFA;
+    color: #222222;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.promotions__btn:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   EXPLORE ALL TRIPS SECTION
+   ========================================================================== */
+.explore-trips {
+    padding: 100px 50px;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.explore-trips__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.explore-trips__title {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #222222;
+    text-transform: capitalize;
+}
+
+.explore-trips__subtitle {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+.explore-trips__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.explore-trips__row {
+    display: flex;
+    gap: 24px;
+}
+
+.trip-card {
+    flex: 1;
+    min-width: 0;
+    height: 500px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.trip-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 50%);
+    border-radius: 16px;
+}
+
+.trip-card:hover {
+    transform: scale(1.02);
+}
+
+.trip-card--fixed {
+    width: 422px;
+    flex: none;
+}
+
+.trip-card__location {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1px solid #E3E8EF;
+    padding: 8px 16px;
+    border-radius: 600px;
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #222222;
+    align-self: flex-start;
+}
+
+.trip-card__detail {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.trip-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #FFFFFF;
+}
+
+.trip-card__price {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.trip-card__dates {
+    font-family: "Geist", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.trip-card__link {
+    font-family: "Geist", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trip-card__link svg {
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   HOW TO BOOK SECTION
+   ========================================================================== */
+.how-to-book {
+    padding: 100px 50px;
+    background-color: #FAFAFA;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.how-to-book__header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.how-to-book__title {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #222222;
+    text-transform: capitalize;
+}
+
+.how-to-book__subtitle {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #7C7C7C;
+}
+
+.how-to-book__grid {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.process-card {
+    flex: 1;
+    min-width: 0;
+    height: 340px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.process-card--offset {
+    margin-top: 78px;
+}
+
+.process-card__number {
+    font-family: "Geist", sans-serif;
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    color: #222222;
+    text-transform: capitalize;
+}
+
+.process-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.process-card__title {
+    font-family: "Geist", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #222222;
+    text-transform: capitalize;
+}
+
+.process-card__desc {
+    font-family: "Geist", sans-serif;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #222222;
+    opacity: 0.7;
+}
+
+/* ==========================================================================
+   CTA + FOOTER SECTION
+   ========================================================================== */
+.cta-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.cta-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    gap: 32px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cta-section__title {
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 84px;
+    line-height: 90px;
+    letter-spacing: -3px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.cta-section__desc {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+}
+
+.cta-section__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-family: 'Geist', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: #FAFAFA;
+    color: #222222;
+    border: none;
+}
+
+.cta-section__btn:hover {
+    background: #FFFFFF;
+}
+
+/* ==========================================================================
+   RESPONSIVE - TABLET (max-width: 1023px)
+   ========================================================================== */
+@media (max-width: 1023px) {
+    /* Hero */
+    .trips-hero {
+        padding: 32px 24px;
+    }
+
+    .trips-hero__content {
+        gap: 32px;
+    }
+
+    .trips-hero__header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .trips-hero__title {
+        font-size: 56px;
+        line-height: 62px;
+        letter-spacing: -2px;
+    }
+
+    .trips-hero__desc {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .trips-hero__image {
+        height: 400px;
+    }
+
+    /* Trip Category */
+    .trip-category {
+        padding: 50px 24px;
+    }
+
+    .trip-category__header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        margin-bottom: 32px;
+    }
+
+    .trip-category__title {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -1.5px;
+        width: 100%;
+    }
+
+    .trip-category__subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .trip-category__row {
+        flex-wrap: wrap;
+    }
+
+    .category-card--large,
+    .category-card--small {
+        width: calc(50% - 12px);
+    }
+
+    .category-card {
+        height: 300px;
+    }
+
+    .category-card__title {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .category-card__desc {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    /* Activities */
+    .activities {
+        padding: 50px 24px;
+    }
+
+    .activities__header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        margin-bottom: 32px;
+    }
+
+    .activities__title {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -1.5px;
+        width: 100%;
+    }
+
+    .activities__subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .activities__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .activity-card {
+        height: 400px;
+    }
+
+    /* Popular Destinations */
+    .popular-destinations {
+        padding: 50px 24px;
+    }
+
+    .popular-destinations__content {
+        flex-direction: column;
+    }
+
+    .popular-destinations__header {
+        gap: 24px;
+    }
+
+    .popular-destinations__title {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -1.5px;
+    }
+
+    .popular-destinations__subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .popular-destinations__map {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Hide map flags and connections on tablet */
+    .map-flag,
+    .map-connections {
+        display: none;
+    }
+
+    .destination-card {
+        width: 160px;
+        padding: 8px;
+    }
+
+    .destination-card__image {
+        height: 70px;
+    }
+
+    .destination-card--1 {
+        left: 5%;
+        top: 100px;
+    }
+
+    .destination-card--2 {
+        left: 35%;
+        top: 50px;
+    }
+
+    .destination-card--3 {
+        left: 65%;
+        top: 120px;
+    }
+
+    /* Promotions */
+    .promotions {
+        padding: 50px 24px;
+    }
+
+    .promotions__header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        margin-bottom: 32px;
+    }
+
+    .promotions__title {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -1.5px;
+        width: 100%;
+    }
+
+    .promotions__subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .promotions__voucher {
+        height: 350px;
+    }
+
+    .promotions__promo-title {
+        font-size: 48px;
+        line-height: 52px;
+    }
+
+    .promotions__discount-number {
+        font-size: 72px;
+        line-height: 60px;
+    }
+
+    /* Explore Trips */
+    .explore-trips {
+        padding: 50px 24px;
+    }
+
+    .explore-trips__header {
+        margin-bottom: 32px;
+    }
+
+    .explore-trips__title {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -1.5px;
+    }
+
+    .explore-trips__subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .explore-trips__row {
+        flex-wrap: wrap;
+    }
+
+    .trip-card {
+        height: 400px;
+        width: calc(50% - 12px);
+        flex: none;
+    }
+
+    .trip-card--fixed {
+        width: calc(50% - 12px);
+    }
+
+    /* How to Book */
+    .how-to-book {
+        padding: 50px 24px;
+    }
+
+    .how-to-book__header {
+        margin-bottom: 32px;
+    }
+
+    .how-to-book__title {
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -1.5px;
+    }
+
+    .how-to-book__subtitle {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .how-to-book__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .process-card {
+        height: 280px;
+    }
+
+    .process-card--offset {
+        margin-top: 0;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 80px 32px;
+        gap: 24px;
+    }
+
+    .cta-section__title {
+        font-size: 56px;
+        line-height: 62px;
+        letter-spacing: -2px;
+    }
+
+    .cta-section__desc {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE - MOBILE (max-width: 767px)
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Hero */
+    .trips-hero {
+        padding: 32px 16px;
+    }
+
+    .trips-hero__content {
+        gap: 24px;
+    }
+
+    .trips-hero__header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .trips-hero__title {
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: -1px;
+    }
+
+    .trips-hero__desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .trips-hero__image {
+        height: 250px;
+        border-radius: 8px;
+    }
+
+    /* Trip Category */
+    .trip-category {
+        padding: 32px 16px;
+    }
+
+    .trip-category__header {
+        margin-bottom: 24px;
+    }
+
+    .trip-category__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .trip-category__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+    }
+
+    .trip-category__grid {
+        flex-direction: row;
+        overflow-x: auto;
+        gap: 16px;
+        padding-bottom: 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .trip-category__row {
+        flex-shrink: 0;
+    }
+
+    .category-card {
+        width: 250px;
+        height: 250px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        border-radius: 12px;
+    }
+
+    .category-card--large,
+    .category-card--small,
+    .category-card--flex {
+        width: 250px;
+    }
+
+    .category-card__title {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .category-card__desc {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Activities */
+    .activities {
+        padding: 32px 16px;
+    }
+
+    .activities__header {
+        margin-bottom: 24px;
+    }
+
+    .activities__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .activities__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .activities__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .activity-card {
+        flex-direction: row;
+        height: auto;
+        gap: 16px;
+    }
+
+    .activity-card--text-first,
+    .activity-card--image-first {
+        flex-direction: row;
+    }
+
+    .activity-card--image-first .activity-card__image {
+        order: 0;
+    }
+
+    .activity-card__image {
+        width: 164px;
+        height: 164px;
+        flex-shrink: 0;
+        border-radius: 12px;
+    }
+
+    .activity-card__text {
+        flex: 1;
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    .activity-card__title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .activity-card__desc {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Popular Destinations */
+    .popular-destinations {
+        padding: 32px 16px;
+    }
+
+    .popular-destinations__header {
+        gap: 16px;
+    }
+
+    .popular-destinations__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .popular-destinations__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .popular-destinations__map {
+        height: 200px;
+    }
+
+    .destination-card {
+        width: 110px;
+        padding: 6px;
+    }
+
+    .destination-card__pin {
+        font-size: 16px;
+    }
+
+    .destination-card__image {
+        height: 50px;
+    }
+
+    .destination-card__title {
+        font-size: 11px;
+        line-height: 14px;
+    }
+
+    .destination-card__desc {
+        font-size: 10px;
+        line-height: 14px;
+        display: none;
+    }
+
+    /* Promotions */
+    .promotions {
+        padding: 32px 16px;
+    }
+
+    .promotions__header {
+        margin-bottom: 24px;
+    }
+
+    .promotions__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .promotions__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .promotions__voucher {
+        height: 200px;
+        padding: 16px;
+    }
+
+    .promotions__badge {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .promotions__detail {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .promotions__promo-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .promotions__discount-number {
+        font-size: 48px;
+        line-height: 40px;
+    }
+
+    .promotions__discount-percent {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .promotions__discount-label,
+    .promotions__discount-note {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .promotions__btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Explore Trips */
+    .explore-trips {
+        padding: 32px 16px;
+    }
+
+    .explore-trips__header {
+        margin-bottom: 24px;
+    }
+
+    .explore-trips__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .explore-trips__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .explore-trips__grid {
+        gap: 24px;
+    }
+
+    .explore-trips__row {
+        flex-direction: column;
+    }
+
+    .trip-card,
+    .trip-card--fixed {
+        width: 100%;
+        height: 300px;
+    }
+
+    .trip-card__price {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .trip-card__dates {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .trip-card__link {
+        font-size: 14px;
+    }
+
+    /* How to Book */
+    .how-to-book {
+        padding: 32px 16px;
+    }
+
+    .how-to-book__header {
+        margin-bottom: 24px;
+    }
+
+    .how-to-book__title {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -1px;
+    }
+
+    .how-to-book__subtitle {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .how-to-book__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .process-card {
+        height: auto;
+        min-height: 182px;
+        padding: 20px;
+    }
+
+    .process-card--offset {
+        margin-top: 0;
+    }
+
+    .process-card__number {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .process-card__title {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .process-card__desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 60px 16px;
+        gap: 24px;
+    }
+
+    .cta-section__title {
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: -1px;
+    }
+
+    .cta-section__desc {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .cta-section__btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    /* CTA Footer */
+    .cta-footer {
+        background-position: center top;
+    }
+}
