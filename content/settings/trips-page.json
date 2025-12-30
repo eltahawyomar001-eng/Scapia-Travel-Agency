@@ -1,0 +1,147 @@
+{
+  "hero": {
+    "title": "Explore Our Trips",
+    "description": "Discover handcrafted journeys to the world's most breathtaking destinations. From tropical paradises to mountain adventures, find your perfect escape.",
+    "image": "/images/trips-hero.jpg"
+  },
+  "categories": {
+    "title": "Trip Categories",
+    "subtitle": "Choose your adventure style and let us craft the perfect journey for you.",
+    "cards": [
+      {
+        "title": "Family Holidays",
+        "description": "Create lasting memories with kid-friendly adventures and comfortable accommodations.",
+        "image": "/images/categories/family.jpg",
+        "url": "/trips.html?category=family",
+        "size": "large"
+      },
+      {
+        "title": "Adventure Travel",
+        "description": "Push your limits with thrilling outdoor experiences and adrenaline-pumping activities.",
+        "image": "/images/categories/adventure.jpg",
+        "url": "/trips.html?category=adventure",
+        "size": "flex"
+      },
+      {
+        "title": "Beach Getaways",
+        "description": "Relax on pristine shores with crystal-clear waters and world-class resorts.",
+        "image": "/images/categories/beach.jpg",
+        "url": "/trips.html?category=beach",
+        "size": "flex"
+      },
+      {
+        "title": "Nature Escapes",
+        "description": "Immerse yourself in breathtaking landscapes and wildlife encounters.",
+        "image": "/images/categories/nature.jpg",
+        "url": "/trips.html?category=nature",
+        "size": "flex"
+      },
+      {
+        "title": "Cultural Tours",
+        "description": "Dive deep into local traditions, history, and authentic experiences.",
+        "image": "/images/categories/cultural.jpg",
+        "url": "/trips.html?category=cultural",
+        "size": "large"
+      }
+    ]
+  },
+  "activities": {
+    "title": "Featured Activities",
+    "subtitle": "Experience the extraordinary with our curated selection of activities.",
+    "cards": [
+      {
+        "title": "Scuba Diving",
+        "description": "Explore vibrant coral reefs and encounter incredible marine life in the world's best diving spots.",
+        "image": "/images/activities/diving.jpg",
+        "layout": "text-first"
+      },
+      {
+        "title": "Mountain Trekking",
+        "description": "Challenge yourself with guided hikes through stunning mountain ranges and scenic trails.",
+        "image": "/images/activities/trekking.jpg",
+        "layout": "image-first"
+      },
+      {
+        "title": "Wildlife Safari",
+        "description": "Witness majestic animals in their natural habitat with expert guides.",
+        "image": "/images/activities/safari.jpg",
+        "layout": "text-first"
+      }
+    ]
+  },
+  "popularDestinations": {
+    "title": "Popular Destinations",
+    "subtitle": "Our most loved destinations, chosen by travelers like you.",
+    "mapImage": "/images/world-map.png",
+    "destinations": [
+      {
+        "title": "Bali, Indonesia",
+        "description": "Tropical paradise with ancient temples, lush rice terraces, and pristine beaches.",
+        "image": "/images/destinations/bali.jpg",
+        "flag": "🇮🇩"
+      },
+      {
+        "title": "Santorini, Greece",
+        "description": "Iconic white-washed villages perched on dramatic cliffs overlooking the Aegean Sea.",
+        "image": "/images/destinations/santorini.jpg",
+        "flag": "🇬🇷"
+      },
+      {
+        "title": "Kyoto, Japan",
+        "description": "Ancient capital city with stunning temples, traditional gardens, and rich culture.",
+        "image": "/images/destinations/kyoto.jpg",
+        "flag": "🇯🇵"
+      },
+      {
+        "title": "Machu Picchu, Peru",
+        "description": "Mysterious ancient Incan citadel nestled high in the Andes mountains.",
+        "image": "/images/destinations/machu-picchu.jpg",
+        "flag": "🇵🇪"
+      }
+    ]
+  },
+  "promotions": {
+    "title": "Special Offers",
+    "subtitle": "Take advantage of our limited-time deals and save on your next adventure.",
+    "voucher": {
+      "badge": "Limited Time",
+      "promoTitle": "Summer Sale",
+      "discountValue": "25%",
+      "discountLabel": "OFF",
+      "discountNote": "On selected trips",
+      "buttonText": "Claim Offer",
+      "buttonUrl": "/contact.html",
+      "backgroundImage": "/images/promo-bg.jpg"
+    }
+  },
+  "exploreTrips": {
+    "title": "All Trips",
+    "subtitle": "Browse our complete collection of curated travel experiences."
+  },
+  "howToBook": {
+    "title": "How to Book",
+    "subtitle": "Your journey to an unforgettable adventure is just a few simple steps away.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Choose Your Trip",
+        "description": "Browse our curated collection and find the perfect destination for your next adventure."
+      },
+      {
+        "number": "02",
+        "title": "Customize Your Experience",
+        "description": "Work with our travel designers to personalize every detail of your journey."
+      },
+      {
+        "number": "03",
+        "title": "Confirm & Pay",
+        "description": "Secure your booking with flexible payment options and comprehensive travel protection."
+      },
+      {
+        "number": "04",
+        "title": "Pack & Go!",
+        "description": "Receive your detailed itinerary and get ready for the adventure of a lifetime."
+      }
+    ]
+  }
+}

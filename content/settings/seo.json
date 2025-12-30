@@ -1,0 +1,26 @@
+{
+  "defaultTitle": "SCAPIA - Extraordinary Travel Experiences",
+  "titleSeparator": " | ",
+  "siteName": "SCAPIA",
+  "defaultDescription": "Discover handcrafted journeys to the world's most breathtaking destinations. From tropical paradises to mountain adventures, SCAPIA creates unforgettable travel experiences.",
+  "ogImage": "/images/og-image.jpg",
+  "twitterHandle": "@scapiatravel",
+  "pages": {
+    "home": {
+      "title": "Home",
+      "description": "Welcome to SCAPIA - Your gateway to extraordinary travel experiences. Explore curated trips to the world's most stunning destinations."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn about SCAPIA's journey, our passionate team, and our commitment to creating unforgettable travel experiences since 2009."
+    },
+    "trips": {
+      "title": "Explore Trips",
+      "description": "Browse our collection of handcrafted travel packages. From beach getaways to adventure tours, find your perfect escape with SCAPIA."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Get in touch with SCAPIA's travel experts. We're here to help you plan your dream vacation and answer all your travel questions."
+    }
+  }
+}

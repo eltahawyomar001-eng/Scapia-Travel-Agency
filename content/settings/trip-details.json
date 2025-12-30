@@ -1,0 +1,15 @@
+{
+  "settings": {
+    "bookButtonText": "Book This Trip",
+    "includesTitle": "What's Included",
+    "itineraryTitle": "Day-by-Day Itinerary",
+    "galleryTitle": "Trip Gallery"
+  },
+  "labels": {
+    "duration": "Duration",
+    "groupSize": "Group Size",
+    "tourType": "Tour Type",
+    "accommodation": "Accommodation",
+    "price": "Starting From"
+  }
+}

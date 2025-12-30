@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "title": "Get in Touch",
+    "description": "Have questions about your next adventure? We're here to help you plan the perfect trip.",
+    "contactInfo": [
+      { "label": "Email", "value": "hello@scapia.travel", "type": "email" },
+      { "label": "Phone", "value": "+1 (234) 567-890", "type": "phone" },
+      { "label": "Address", "value": "123 Travel Street, Adventure City, AC 12345", "type": "address" }
+    ],
+    "socialLinks": [
+      { "platform": "Facebook", "url": "https://facebook.com/scapia", "abbr": "Fb" },
+      { "platform": "Instagram", "url": "https://instagram.com/scapia", "abbr": "Ig" },
+      { "platform": "Twitter", "url": "https://twitter.com/scapia", "abbr": "Tw" },
+      { "platform": "LinkedIn", "url": "https://linkedin.com/company/scapia", "abbr": "Li" }
+    ]
+  },
+  "form": {
+    "title": "Send Us a Message",
+    "fields": [
+      { "label": "Full Name", "placeholder": "Enter your full name", "type": "text", "required": true },
+      { "label": "Email Address", "placeholder": "Enter your email", "type": "email", "required": true },
+      { "label": "Phone Number", "placeholder": "Enter your phone number", "type": "tel", "required": false },
+      { 
+        "label": "Travel Interest", 
+        "placeholder": "Select your interest", 
+        "type": "select", 
+        "required": true,
+        "options": ["Beach Getaway", "Adventure Travel", "Cultural Tour", "Family Holiday", "Romantic Escape", "Other"]
+      },
+      { "label": "Preferred Travel Date", "placeholder": "Select date", "type": "date", "required": false },
+      { "label": "Your Message", "placeholder": "Tell us about your dream trip...", "type": "textarea", "required": true }
+    ],
+    "submitText": "Send Message"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How far in advance should I book my trip?",
+        "answer": "We recommend booking at least 2-3 months in advance for popular destinations, especially during peak seasons. However, we can also accommodate last-minute bookings based on availability."
+      },
+      {
+        "question": "What is your cancellation policy?",
+        "answer": "Our cancellation policy varies by trip type. Generally, cancellations made 30+ days before departure receive a full refund. We also offer travel protection plans for added peace of mind."
+      },
+      {
+        "question": "Do you offer group discounts?",
+        "answer": "Yes! We offer special rates for groups of 6 or more travelers. Contact us for a customized group quote."
+      },
+      {
+        "question": "Are flights included in the trip price?",
+        "answer": "Trip prices typically don't include international flights unless specified. We can help you find the best flight options to complement your package."
+      },
+      {
+        "question": "What travel documents do I need?",
+        "answer": "Requirements vary by destination. Our team will provide detailed information about visa requirements, vaccinations, and other documentation needed for your specific trip."
+      },
+      {
+        "question": "Can I customize my trip itinerary?",
+        "answer": "Absolutely! All our trips can be customized to match your preferences, budget, and travel style. Our travel designers will work with you to create your perfect journey."
+      }
+    ]
+  }
+}

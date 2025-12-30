@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "title": "About Us",
+    "description": "We're a passionate team of travel enthusiasts dedicated to creating unforgettable journeys. Since our founding, we've helped thousands of travelers discover the world's most incredible destinations.",
+    "images": [
+      "/images/about-hero-1.jpg",
+      "/images/about-hero-2.jpg",
+      "/images/about-hero-3.jpg"
+    ]
+  },
+  "collective": {
+    "title": "Our Collective Journey",
+    "description": "From humble beginnings to becoming a trusted name in travel, our journey has been shaped by our commitment to excellence, sustainability, and creating meaningful connections between travelers and destinations.",
+    "stats": [
+      { "number": "50K+", "label": "Happy Travelers" },
+      { "number": "100+", "label": "Destinations" },
+      { "number": "15+", "label": "Years Experience" },
+      { "number": "4.9", "label": "Customer Rating" }
+    ]
+  },
+  "partners": [
+    { "name": "Marriott Hotels", "logo": "/images/partners/marriott.png" },
+    { "name": "Emirates Airlines", "logo": "/images/partners/emirates.png" },
+    { "name": "National Geographic", "logo": "/images/partners/natgeo.png" },
+    { "name": "World Travel Awards", "logo": "/images/partners/wta.png" },
+    { "name": "Booking.com", "logo": "/images/partners/booking.png" }
+  ],
+  "storyTimeline": {
+    "title": "Our Story",
+    "images": [
+      "/images/story-1.jpg",
+      "/images/story-2.jpg"
+    ],
+    "items": [
+      { "year": "2009", "description": "SCAPIA was founded with a vision to make extraordinary travel accessible to everyone." },
+      { "year": "2012", "description": "Expanded our destinations to cover all seven continents, reaching remote and unique locations." },
+      { "year": "2016", "description": "Launched our sustainable travel initiative, committing to eco-friendly tourism practices." },
+      { "year": "2020", "description": "Adapted to new travel realities, introducing flexible booking and virtual experiences." },
+      { "year": "2024", "description": "Celebrating 15 years of creating unforgettable memories for travelers worldwide." }
+    ]
+  },
+  "whyChoose": {
+    "title": "Why Choose SCAPIA",
+    "subtitle": "We go above and beyond to ensure every journey exceeds your expectations.",
+    "cards": [
+      { "icon": "🌍", "title": "Expert Local Guides" },
+      { "icon": "💎", "title": "Premium Experiences" },
+      { "icon": "🛡️", "title": "Travel Protection" },
+      { "icon": "🌱", "title": "Sustainable Tourism" },
+      { "icon": "💬", "title": "24/7 Support" },
+      { "icon": "✨", "title": "Personalized Service" }
+    ]
+  },
+  "team": {
+    "title": "Meet Our Team",
+    "subtitle": "The passionate people behind your extraordinary travel experiences.",
+    "members": [
+      {
+        "name": "Sarah Johnson",
+        "role": "Founder & CEO",
+        "image": "/images/team/sarah.jpg",
+        "social": {
+          "facebook": "https://facebook.com/",
+          "linkedin": "https://linkedin.com/in/",
+          "instagram": "https://instagram.com/"
+        }
+      },
+      {
+        "name": "Michael Chen",
+        "role": "Head of Operations",
+        "image": "/images/team/michael.jpg",
+        "social": {
+          "facebook": "https://facebook.com/",
+          "linkedin": "https://linkedin.com/in/",
+          "instagram": "https://instagram.com/"
+        }
+      },
+      {
+        "name": "Emma Rodriguez",
+        "role": "Lead Travel Designer",
+        "image": "/images/team/emma.jpg",
+        "social": {
+          "facebook": "https://facebook.com/",
+          "linkedin": "https://linkedin.com/in/",
+          "instagram": "https://instagram.com/"
+        }
+      },
+      {
+        "name": "David Park",
+        "role": "Customer Experience",
+        "image": "/images/team/david.jpg",
+        "social": {
+          "facebook": "https://facebook.com/",
+          "linkedin": "https://linkedin.com/in/",
+          "instagram": "https://instagram.com/"
+        }
+      }
+    ]
+  }
+}

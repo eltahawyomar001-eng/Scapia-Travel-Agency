@@ -1,0 +1,42 @@
+{
+  "siteName": "SCAPIA",
+  "navigation": {
+    "logo": "SCAPIA",
+    "links": [
+      { "label": "Home", "url": "/" },
+      { "label": "Trips", "url": "/trips.html" },
+      { "label": "About Us", "url": "/about.html" },
+      { "label": "Contact", "url": "/contact.html" }
+    ],
+    "langButton": "EN"
+  },
+  "footer": {
+    "description": "Your gateway to extraordinary travel experiences, where dreams become destinations and every trip tells a story.",
+    "address": "123 Travel Street, Adventure City, AC 12345",
+    "phone": "+1 (234) 567-890",
+    "email": "hello@scapia.travel",
+    "quickLinks": [
+      { "label": "Home", "url": "/" },
+      { "label": "About Us", "url": "/about.html" },
+      { "label": "Trips", "url": "/trips.html" },
+      { "label": "Blog", "url": "/blog.html" },
+      { "label": "Contact", "url": "/contact.html" }
+    ],
+    "socialLinks": [
+      { "platform": "Facebook", "url": "https://facebook.com/scapia", "abbr": "Fb" },
+      { "platform": "Instagram", "url": "https://instagram.com/scapia", "abbr": "Ig" },
+      { "platform": "Twitter", "url": "https://twitter.com/scapia", "abbr": "Tw" },
+      { "platform": "LinkedIn", "url": "https://linkedin.com/company/scapia", "abbr": "Li" }
+    ],
+    "newsletterText": "Subscribe to our newsletter for travel tips, exclusive offers, and destination inspiration.",
+    "newsletterButton": "Send",
+    "copyright": "© 2024 SCAPIA. All rights reserved."
+  },
+  "cta": {
+    "title": "Ready to Start Your Adventure?",
+    "description": "Join thousands of happy travelers who have discovered the world with SCAPIA.",
+    "buttonText": "Start Planning",
+    "buttonUrl": "/contact.html",
+    "backgroundImage": "/images/cta-bg.jpg"
+  }
+}

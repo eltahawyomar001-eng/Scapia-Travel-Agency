@@ -1,9 +1,111 @@
 {
-    "heroTitle": "Let's Explore destinations you've only imagined.",
-    "heroDescription": "Explore new horizons, experience new cultures, and create lasting memories.",
-    "heroImage": "/images/hero-bg.jpg",
-    "servicesTitle": "Step Into Your Gateway to Smooth, Stress-Free, and Seamless Travel",
-    "servicesSubtitle": "Experience a world of convenience and adventure with our trusted services.",
-    "ctaTitle": "Ready to Start Your Adventure?",
-    "ctaDescription": "Join thousands of happy travelers who have explored the world with SCAPIA."
+  "hero": {
+    "title": "Let's Explore destinations you've only imagined.",
+    "description": "Explore new horizons, experience new cultures, and create lasting memories.",
+    "buttonText": "Explore Trips",
+    "buttonUrl": "/trips.html",
+    "backgroundImage": "/images/hero-bg.jpg",
+    "stats": [
+      { "number": "500+", "label": "Destinations" },
+      { "number": "50K+", "label": "Happy Travelers" },
+      { "number": "15+", "label": "Years Experience" }
+    ]
+  },
+  "services": {
+    "title": "Step Into Your Gateway to Smooth, Stress-Free, and Seamless Travel",
+    "subtitle": "Experience a world of convenience and adventure with our trusted services.",
+    "cards": [
+      {
+        "icon": "✈️",
+        "title": "Flight Booking",
+        "description": "Find the best deals on flights to destinations worldwide with our trusted airline partners."
+      },
+      {
+        "icon": "🏨",
+        "title": "Hotel Reservations",
+        "description": "Book premium accommodations from luxury resorts to cozy boutique hotels."
+      },
+      {
+        "icon": "🗺️",
+        "title": "Tour Packages",
+        "description": "Expertly curated tour packages with local guides and authentic experiences."
+      },
+      {
+        "icon": "🚗",
+        "title": "Transportation",
+        "description": "Seamless airport transfers and private transportation services."
+      }
+    ]
+  },
+  "featuredTrips": {
+    "title": "Featured Trips",
+    "subtitle": "Handpicked destinations for unforgettable adventures.",
+    "viewAllText": "View All Trips",
+    "viewAllUrl": "/trips.html"
+  },
+  "gallery": {
+    "title": "Travel Gallery",
+    "subtitle": "Glimpses of extraordinary journeys from around the world.",
+    "images": [
+      { "image": "/images/gallery/gallery-1.jpg", "alt": "Beach sunset", "location": "Maldives" },
+      { "image": "/images/gallery/gallery-2.jpg", "alt": "Mountain view", "location": "Swiss Alps" },
+      { "image": "/images/gallery/gallery-3.jpg", "alt": "City lights", "location": "Tokyo, Japan" },
+      { "image": "/images/gallery/gallery-4.jpg", "alt": "Ancient temple", "location": "Bali, Indonesia" },
+      { "image": "/images/gallery/gallery-5.jpg", "alt": "Safari adventure", "location": "Kenya" },
+      { "image": "/images/gallery/gallery-6.jpg", "alt": "Northern lights", "location": "Iceland" }
+    ]
+  },
+  "whyChoose": {
+    "title": "Why Choose SCAPIA",
+    "subtitle": "What makes us different from other travel agencies.",
+    "cards": [
+      {
+        "icon": "🌟",
+        "title": "Expert Guides",
+        "description": "Our local experts know every hidden gem and secret spot."
+      },
+      {
+        "icon": "💰",
+        "title": "Best Value",
+        "description": "Premium experiences at competitive prices with no hidden fees."
+      },
+      {
+        "icon": "🛡️",
+        "title": "Safe Travel",
+        "description": "Your safety is our priority with 24/7 support worldwide."
+      },
+      {
+        "icon": "🎯",
+        "title": "Personalized",
+        "description": "Every trip is tailored to your preferences and travel style."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Travelers Say",
+    "subtitle": "Real stories from real adventurers who traveled with us.",
+    "items": [
+      {
+        "quote": "SCAPIA made our honeymoon absolutely magical. Every detail was perfect, from the stunning resort to the private tours. We couldn't have asked for a better experience!",
+        "author": "Emily & James Wilson",
+        "role": "Honeymoon Trip to Maldives",
+        "image": "/images/testimonials/emily-james.jpg",
+        "rating": 5
+      },
+      {
+        "quote": "As a solo traveler, I was nervous about my first big adventure. The team at SCAPIA took care of everything and I made friends for life on the group tour!",
+        "author": "Michael Chen",
+        "role": "Adventure Trip to Peru",
+        "image": "/images/testimonials/michael.jpg",
+        "rating": 5
+      },
+      {
+        "quote": "Traveling with kids can be stressful, but SCAPIA planned the perfect family vacation. Activities for all ages and accommodations that exceeded our expectations.",
+        "author": "Sarah Martinez",
+        "role": "Family Trip to Japan",
+        "image": "/images/testimonials/sarah.jpg",
+        "rating": 5
+      }
+    ]
+  }
 }
