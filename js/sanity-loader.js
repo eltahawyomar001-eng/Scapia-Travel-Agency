@@ -19,16 +19,14 @@ function sanityUrl(query) {
 }
 
 /**
- * Fetch data from Sanity with no caching
+ * Fetch data from Sanity (simple GET request, no custom headers to avoid CORS preflight)
  */
 async function fetchSanity(query) {
   try {
-    const response = await fetch(sanityUrl(query), {
-      cache: 'no-store',
-      headers: {
-        'Cache-Control': 'no-cache'
-      }
-    });
+    const response = await fetch(sanityUrl(query));
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const data = await response.json();
     console.log('Sanity response for query:', query.substring(0, 50), data.result);
     return data.result;
